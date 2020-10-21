@@ -1,0 +1,14 @@
+{
+  "name": "maurobrandan.com",
+  "version": "1.0.0",
+  "description": "Mi portafolio",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "portafoliio"
+  ],
+  "author": "Mauro Brandan",
+  "license": "ISC"
+}
