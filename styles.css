@@ -1,7 +1,7 @@
 :root{
-    --main-color: #02A857;
-    --main-second-color: #F51B00;
-    --secondary-color: #2BFF97;
+    --main-color: #2BFF97;
+    --main-second-color: #FF4D52;
+    --secondary-color: #02A857;
     --secondary-second: #A80100;
     --color: white;
 }
@@ -9,11 +9,11 @@
 body {
     margin: 0;
     font-family: 'Muli', sans-serif;
-    color:var(--color)
+    color:var(--color);
 }
 
 .header{
-    background-color: var(--main-color);
+    background-color:var(--main-color);
     align-items: center;
     width: 100%;
     display: flex;
@@ -58,4 +58,54 @@ body {
     width: fit-content;
     letter-spacing: 1px;
     margin: 10px 0px;
+}
+
+.projects{
+    background: linear-gradient(var(--main-color), var(--main-second-color));
+    padding: 3em 3em;
+    display: flex;
+    flex-direction: column;
+}
+
+.projects h2{
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding-right: 6em;
+}
+
+.projects__item{
+    display: flex;
+    justify-content: space-between;
+    margin: 3em;
+    border: 3px solid var(--color) ;
+    border-radius: 3em;
+}
+
+.projects__item--details{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-self: center;
+    padding: 2em;
+}
+
+.projects__item--details button{
+    background-color: rgba(255, 255, 255, 0.5);
+    border: solid 3px;
+    border-radius: 5px;
+    color: var(--color);
+    cursor: pointer;
+    font-size: 16px;  
+    font-weight: bold; 
+    height: 2em;
+    width: fit-content;
+    letter-spacing: 1px;
+    margin: 10px 0px;
+}
+
+.projects__item img{
+    margin: 1em;
+    width: 15em;
+    height: 15em;
 }
