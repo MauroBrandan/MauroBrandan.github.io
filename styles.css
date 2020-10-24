@@ -1,9 +1,19 @@
+:root{
+    --main-color: #02A857;
+    --main-second-color: #F51B00;
+    --secondary-color: #2BFF97;
+    --secondary-second: #A80100;
+    --color: white;
+}
+
 body {
     margin: 0;
+    font-family: 'Muli', sans-serif;
+    color:var(--color)
 }
 
 .header{
-    background-color: red;
+    background-color: var(--main-color);
     align-items: center;
     width: 100%;
     display: flex;
@@ -21,6 +31,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    font-family: 'Major Mono Display', monospace;
 }
 
 .header__menu{
@@ -35,8 +46,16 @@ body {
     margin-left: 1em;
 }
 
-
-.header__subtitle{
-    background-color: green;
-    align-items: flex-end;
+.header__menu button{
+    background-color: rgba(255, 255, 255, 0.5);
+    border: solid 3px;
+    border-radius: 5px;
+    color: var(--color);
+    cursor: pointer;
+    font-size: 16px;  
+    font-weight: bold; 
+    height: 2em;
+    width: fit-content;
+    letter-spacing: 1px;
+    margin: 10px 0px;
 }
