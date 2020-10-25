@@ -12,6 +12,26 @@ body {
     color:var(--color);
 }
 
+button{
+    background-color: rgba(255, 255, 255, 0.5);
+    border: solid 3px;
+    border-radius: 5px;
+    color: var(--color);
+    cursor: pointer;
+    font-size: 16px;  
+    font-weight: bold; 
+    height: 2em;
+    width: fit-content;
+    letter-spacing: 1px;
+    margin: 10px 0px;
+}
+
+button:hover{
+    background-color: var(--main-second-color);
+    transition: 305ms;
+    transform: scale(1.5);
+}
+
 .header{
     background-color:var(--main-color);
     align-items: center;
@@ -46,20 +66,6 @@ body {
     margin-left: 1em;
 }
 
-.header__menu button{
-    background-color: rgba(255, 255, 255, 0.5);
-    border: solid 3px;
-    border-radius: 5px;
-    color: var(--color);
-    cursor: pointer;
-    font-size: 16px;  
-    font-weight: bold; 
-    height: 2em;
-    width: fit-content;
-    letter-spacing: 1px;
-    margin: 10px 0px;
-}
-
 .projects{
     background: linear-gradient(var(--main-color), var(--main-second-color));
     padding: 3em 3em;
@@ -67,7 +73,7 @@ body {
     flex-direction: column;
 }
 
-.projects h2{
+.projects__title{
     display: flex;
     justify-content: center;
     margin: 0;
@@ -88,20 +94,6 @@ body {
     align-items: center;
     justify-self: center;
     padding: 2em;
-}
-
-.projects__item--details button{
-    background-color: rgba(255, 255, 255, 0.5);
-    border: solid 3px;
-    border-radius: 5px;
-    color: var(--color);
-    cursor: pointer;
-    font-size: 16px;  
-    font-weight: bold; 
-    height: 2em;
-    width: fit-content;
-    letter-spacing: 1px;
-    margin: 10px 0px;
 }
 
 .projects__item img{
