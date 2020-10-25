@@ -66,18 +66,21 @@ button:hover{
     margin-left: 1em;
 }
 
-.projects{
+.main{
     background: linear-gradient(var(--main-color), var(--main-second-color));
-    padding: 3em 3em;
-    display: flex;
-    flex-direction: column;
 }
 
-.projects__title{
+.main__title{
     display: flex;
     justify-content: center;
     margin: 0;
     padding-right: 6em;
+}
+
+.projects{
+    padding: 3em 3em;
+    display: flex;
+    flex-direction: column;
 }
 
 .projects__item{
