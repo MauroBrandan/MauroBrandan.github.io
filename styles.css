@@ -131,3 +131,12 @@ button:hover{
 .aboutMe__item--details li{
     padding: 0.5em;
 }
+
+.footer{
+    background-color: var(--main-second-color);
+}
+
+.footer__item img{
+    width: 2em;
+    height: 2em;
+}
