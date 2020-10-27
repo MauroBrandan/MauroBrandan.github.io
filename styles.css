@@ -4,16 +4,17 @@
     --secondary-color: #02A857;
     --secondary-second: #A80100;
     --color: white;
+    --color-transparent: rgba(255, 255, 255, 0.5)
 }
 
-body {
+body{
     margin: 0;
     font-family: 'Muli', sans-serif;
     color:var(--color);
 }
 
 button{
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: var(--color-transparent);
     border: solid 3px;
     border-radius: 5px;
     color: var(--color);
@@ -47,11 +48,9 @@ button:hover{
 }
 
 .header__description{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    text-align: center;
     font-family: 'Major Mono Display', monospace;
+    padding-left: 9em;
 }
 
 .header__menu{
@@ -70,11 +69,11 @@ button:hover{
     background: linear-gradient(var(--main-color), var(--main-second-color));
 }
 
-.main__title{
+.main__item{
     display: flex;
     justify-content: center;
     margin: 0;
-    padding-right: 6em;
+    font-family: 'Major Mono Display', monospace;
 }
 
 .projects{
@@ -103,4 +102,32 @@ button:hover{
     margin: 1em;
     width: 15em;
     height: 15em;
+}
+
+.aboutMe{
+    display: flex;
+    justify-content: space-around;
+    margin: 2.5em 0;
+}
+
+.aboutMe__item{
+    text-align: center;
+    width: 15%;
+    height: fit-content;
+}
+
+.aboutMe__item--details{
+    font-size: x-large;
+    border: 3px solid var(--color);
+    border-radius: 2em;
+    background-color: var(--color-transparent);
+}
+
+.aboutMe__item--details ul{
+    list-style: none;
+    padding: 0;
+}
+
+.aboutMe__item--details li{
+    padding: 0.5em;
 }
