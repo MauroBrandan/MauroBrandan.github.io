@@ -13,6 +13,11 @@ body{
     color:var(--color);
 }
 
+body a{
+    text-decoration: none;
+    color: var(--color);
+}
+
 button{
     background-color: var(--color-transparent);
     border: solid 3px;
@@ -134,9 +139,38 @@ button:hover{
 
 .footer{
     background-color: var(--main-second-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding-top: 3em;
+    padding-bottom: 1em;
 }
 
-.footer__item img{
+.footer__item--socialMedia{
+    display: flex;
+    flex-flow:column wrap;
+    height: 7em;
+}
+
+.footer__item--socialMedia p{
+    word-spacing: 5px;
+    text-align: center;
+    align-self: center;
+    margin: 2em;
+}
+
+.footer__item--socialMedia img{
+    margin: 2px;
     width: 2em;
     height: 2em;
+}
+
+.footer__item--pages{
+    display: flex;
+    flex-direction: column;
+    margin: 2em 4em;
+}
+
+.footer__item--pages a{
+    margin-top: 1em;
 }
