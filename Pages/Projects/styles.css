@@ -109,33 +109,7 @@ button:hover{
     height: 15em;
 }
 
-.aboutMe{
-    display: flex;
-    justify-content: space-around;
-    margin: 2.5em 0;
-}
-
-.aboutMe__item{
-    text-align: center;
-    width: 15%;
-    height: fit-content;
-}
-
-.aboutMe__item--details{
-    font-size: x-large;
-    border: 3px solid var(--color);
-    border-radius: 2em;
-    background-color: var(--color-transparent);
-}
-
-.aboutMe__item--details ul{
-    list-style: none;
-    padding: 0;
-}
-
-.aboutMe__item--details li{
-    padding: 0.5em;
-}
+/* HOLA */
 
 .footer{
     background-color: var(--main-second-color);
@@ -174,3 +148,56 @@ button:hover{
 .footer__item--pages a{
     margin-top: 1em;
 }
+
+.carousel {
+    overflow: hidden;
+    position: relative;
+    padding: 4em;
+  }
+  
+  .carousel__container {
+    display: flex;
+    justify-content: center;
+    transition: 450ms -webkit-transform;
+    transition: 450ms transform;
+    transition: 450ms transform, 450ms -webkit-transform;
+    font-size: 0;
+    white-space: nowrap;
+  }
+  
+  .carousel__container:hover .carousel-item {
+    opacity: 0.3;
+  }
+  
+  .carousel__container:hover .carousel-item:hover {
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
+    opacity: 1;
+  }
+  
+  .carousel-item {
+    border-radius: 1em;
+    overflow: hidden;
+    position: relative;
+    display: inline-block;
+    width: 10em;
+    height: 12em;
+    margin-right: 0.5em;
+    font-size: 20px;
+    cursor: pointer;
+    transition: 450ms all;
+    -webkit-transform-origin: center left;
+            transform-origin: center left;
+    border: 1px solid var(--color);
+  }
+  
+  .carousel-item:hover ~ .carousel-item {
+    -webkit-transform: translate3d(100px, 0, 0);
+            transform: translate3d(100px, 0, 0);
+  }
+  
+  .carousel-item__img {
+    width: 10em;
+    height: 12em;
+    object-fit: cover;
+  }
