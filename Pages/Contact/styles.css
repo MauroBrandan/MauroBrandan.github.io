@@ -81,60 +81,57 @@ button:hover{
     font-family: 'Major Mono Display', monospace;
 }
 
-.projects{
-    padding: 3em 3em;
-    display: flex;
-    flex-direction: column;
-}
-
-.projects__item{
+.contact{
     display: flex;
     justify-content: space-between;
-    margin: 3em;
-    border: 3px solid var(--color) ;
-    border-radius: 3em;
+    padding: 5em 5em;
 }
 
-.projects__item--details{
+.contact__aboutMe{
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-self: center;
-    padding: 2em;
+    width: 55%;
+    padding: 0 5em;
 }
 
-.projects__item img{
-    margin: 1em;
-    width: 15em;
-    height: 15em;
-}
-
-.aboutMe{
-    display: flex;
-    justify-content: space-around;
-    margin: 2.5em 0;
-}
-
-.aboutMe__item{
+.contact__aboutMe--bio{
+    width: 25em;
+    align-self: center;
     text-align: center;
-    width: 15%;
-    height: fit-content;
+    border: 2px solid var(--color);
+    border-radius: 3em;
+    margin-bottom: 3em;
 }
 
-.aboutMe__item--details{
-    font-size: x-large;
-    border: 3px solid var(--color);
-    border-radius: 2em;
-    background-color: var(--color-transparent);
+.contact__aboutMe--bio:hover{
+    transition: 305ms;
+    transform: scale(1.2);
 }
 
-.aboutMe__item--details ul{
-    list-style: none;
-    padding: 0;
+.contact__aboutMe--socialMedia{
+    text-align: center;
+    width: fit-content;
+}
+.contact__aboutMe--socialMedia img{
+    width: 3em;
+    height: 3em;
 }
 
-.aboutMe__item--details li{
-    padding: 0.5em;
+.contact__aboutMe--socialMedia:hover img{
+    opacity: 0.3;
+}
+
+.contact__aboutMe--socialMedia img:hover{
+    transition: 305ms;
+    transform: scale(1.5);
+    opacity: 1;
+}
+
+.contact__img{
+    align-self: center;
+    width: 25em;
+    height: 25em;
 }
 
 .footer{
