@@ -143,6 +143,11 @@ button:hover{
     height: 2em;
 }
 
+.footer__item--socialMedia a{
+    width: 2em;
+    height: 2em;
+}
+
 .footer__item--pages{
     display: flex;
     flex-direction: column;
