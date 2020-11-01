@@ -47,15 +47,16 @@ button:hover{
 }
 
 .header__logo{
-    margin: 1em;
-    width: 5em;
-    height: 5em;
+    margin: 1em 0 1em 1em;
+    width: 10em;
+    height:10em;
+    object-fit: contain;
 }
 
 .header__description{
     text-align: center;
     font-family: 'Major Mono Display', monospace;
-    padding-left: 14em;
+    padding-left: 10em;
 }
 
 .header__menu{
@@ -116,6 +117,7 @@ button:hover{
 .contact__aboutMe--socialMedia img{
     width: 3em;
     height: 3em;
+    margin: 0.5em;
 }
 
 .contact__aboutMe--socialMedia:hover img{
@@ -129,9 +131,10 @@ button:hover{
 }
 
 .contact__img{
-    align-self: center;
-    width: 25em;
-    height: 25em;
+    width: fit-content;
+    height: fit-content;
+    object-fit: contain;
+    border-radius: 2em;
 }
 
 .footer{
