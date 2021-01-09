@@ -1,6 +1,7 @@
 import Project from '../templates/Project'
 
 const Projects = () => {
+    window.scroll(0, 0);
     const projectItem = Project()
     const view = `
         <div class="main">
@@ -16,7 +17,7 @@ const Projects = () => {
         </section>
 
         <div class="main__item">
-            <button><a href="/contacto">Hablemos</a></button> 
+            <button><a href="#/contacto">Hablemos</a></button> 
         </div>
     </div>
     `;

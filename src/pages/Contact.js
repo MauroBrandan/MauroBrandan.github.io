@@ -19,14 +19,14 @@ const Contact = () => {
                     </div>
                     <div class="contact__aboutMe--socialMedia">
                         <h2>Hablemos</h2>
-                        <img src="../static/gmail.svg" alt="gmail">
-                        <a href="https://www.linkedin.com/in/mauro-brandan/"><img src="../static/linkedin.svg" alt="linkedin"></a>
-                        <a href="https://github.com/MauroBrandan"><img src="../static/github.svg" alt=""></a>
-                        <img src="../static/instagram.svg" alt="instagram">
-                        <img src="../static/whatsapp.svg" alt="whatsapp">
+                        <img src="src/static/gmail.svg" alt="gmail">
+                        <a href="https://www.linkedin.com/in/mauro-brandan/"><img src="src/static/linkedin.svg" alt="linkedin"></a>
+                        <a href="https://github.com/MauroBrandan"><img src="./static/github.svg" alt=""></a>
+                        <img src="src/static/instagram.svg" alt="instagram">
+                        <img src="src/static/whatsapp.svg" alt="whatsapp">
                     </div>
                 </section>
-                    <img class="contact__img" src="../static/Me.jpg" alt="Mauro Brandan">
+                    <img class="contact__img" src="src/static/Me.jpg" alt="Mauro Brandan">
             </section>
         </div>
     `;

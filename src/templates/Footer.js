@@ -9,8 +9,8 @@ const Footer = () => {
             </section>
             <p>© 2020 - Mauro Brandan</p>
             <section class="footer__item--pages">
-                <a href="/contacto">Hablemos</a>
-                <a href="/proyectos">Proyectos</a>
+                <a href="#/contacto">Hablemos</a>
+                <a href="#/proyectos">Proyectos</a>
             </section>
         </footer>
     `;

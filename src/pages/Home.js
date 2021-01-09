@@ -57,7 +57,7 @@ const Home = () => {
             </section>
 
             <div class="main__item">
-                <button><a href="/contacto">Hablemos</a></button> 
+                <button><a href="#/contacto">Hablemos</a></button> 
             </div>
         </div>
     `;

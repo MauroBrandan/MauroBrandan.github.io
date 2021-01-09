@@ -7,7 +7,7 @@ const Project = () => {
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa officiis qui iusto, rerum ut nihil nemo similique at a inventore non ratione deserunt assumenda error laboriosam libero veritatis officia. Ad!
                     Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis esse inventore officia vero, praesentium consequatur soluta eligendi, a quisquam laudantium quod eius? Inventore eum ullam natus velit possimus exercitationem ducimus!
                 </p>
-                <button><a href="file:///C:/Users/mauro/Mis_Documentos/MauroBrandan.com/Pages/Projects/projectPage.html">Ver Proyecto</a></button>
+                <button><a href="#/proyectos">Ver Proyecto</a></button>
             </div>
             <img src="src/static/project.jpg" alt="">
         </section>
