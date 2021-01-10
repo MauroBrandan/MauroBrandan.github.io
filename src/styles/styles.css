@@ -141,6 +141,61 @@ button:hover{
     padding: 0.5em;
 }
 
+.contact{
+    display: flex;
+    justify-content: space-between;
+    padding: 5em 5em;
+}
+
+.contact__aboutMe{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 55%;
+    padding: 0 5em;
+}
+
+.contact__aboutMe--bio{
+    width: 25em;
+    align-self: center;
+    text-align: center;
+    border: 2px solid var(--color);
+    border-radius: 3em;
+    margin-bottom: 3em;
+}
+
+.contact__aboutMe--bio:hover{
+    transition: 305ms;
+    transform: scale(1.2);
+}
+
+.contact__aboutMe--socialMedia{
+    text-align: center;
+    width: fit-content;
+}
+.contact__aboutMe--socialMedia img{
+    width: 3em;
+    height: 3em;
+    margin: 0.5em;
+}
+
+.contact__aboutMe--socialMedia:hover img{
+    opacity: 0.3;
+}
+
+.contact__aboutMe--socialMedia img:hover{
+    transition: 305ms;
+    transform: scale(1.5);
+    opacity: 1;
+}
+
+.contact__img{
+    width: fit-content;
+    height: fit-content;
+    object-fit: contain;
+    border-radius: 2em;
+}
+
 .footer{
     background-color: var(--main-second-color);
     display: flex;
