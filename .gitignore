@@ -78,3 +78,6 @@ dist/
 # Images
 *.jpg
 *.png
+
+#
+Pages_templates/
