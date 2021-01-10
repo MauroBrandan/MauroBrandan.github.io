@@ -1,3 +1,9 @@
+import whatsapp from '../static/whatsapp.svg'
+import gmail from '../static/gmail.svg'
+import instagram from '../static/instagram.svg'
+import linkedin from '../static/linkedin.svg'
+import github from '../static/github.svg'
+
 const Contact = () => {
     const view = `
         <div class="main">
@@ -19,14 +25,14 @@ const Contact = () => {
                     </div>
                     <div class="contact__aboutMe--socialMedia">
                         <h2>Hablemos</h2>
-                        <img src="src/static/gmail.svg" alt="gmail">
-                        <a href="https://www.linkedin.com/in/mauro-brandan/"><img src="src/static/linkedin.svg" alt="linkedin"></a>
-                        <a href="https://github.com/MauroBrandan"><img src="./static/github.svg" alt=""></a>
-                        <img src="src/static/instagram.svg" alt="instagram">
-                        <img src="src/static/whatsapp.svg" alt="whatsapp">
+                        <img src="${gmail}" alt="gmail">
+                        <a href="https://www.linkedin.com/in/mauro-brandan/"><img src="${linkedin}" alt="linkedin"></a>
+                        <a href="https://github.com/MauroBrandan"><img src="${github}" alt="Github"></a>
+                        <img src="${instagram}" alt="instagram">
+                        <img src="${whatsapp}" alt="whatsapp">
                     </div>
                 </section>
-                    <img class="contact__img" src="src/static/Me.jpg" alt="Mauro Brandan">
+                    <img class="contact__img" src="https://imgur.com/gs3jPhz.jpg" alt="Mauro Brandan">
             </section>
         </div>
     `;

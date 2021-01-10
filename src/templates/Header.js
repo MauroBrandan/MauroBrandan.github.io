@@ -1,7 +1,7 @@
 const Header = () => {
     const view = `
     <header class="header">
-        <a href="#/"><img class="header__logo" src="src/static/logo.png" alt="Logo"></a>
+        <a href="#/"><img class="header__logo" src="https://imgur.com/dUsSUsq.png" alt="Logo"></a>
         <div class="header__description">
             <h1>mauro Brandan</h1>
             <h3>frontend Developer</h3>

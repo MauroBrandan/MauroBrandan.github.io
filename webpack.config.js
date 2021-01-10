@@ -20,6 +20,15 @@ module.exports = {
                 use: {
                     loader: 'babel-loader'
                 }
+            },
+            {
+                test: /\.svg$/,
+                use: {
+                    loader: 'url-loader',
+                    options: {
+                        limit: 90000,
+                    }
+                }
             }
         ]
     },

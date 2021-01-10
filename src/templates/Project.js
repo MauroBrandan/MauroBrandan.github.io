@@ -9,7 +9,7 @@ const Project = () => {
                 </p>
                 <button><a href="#/proyectos">Ver Proyecto</a></button>
             </div>
-            <img src="src/static/project.jpg" alt="">
+            <img src="https://imgur.com/K75IAAd.jpg" alt="">
         </section>
     `;
     return view
