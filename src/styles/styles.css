@@ -239,3 +239,37 @@ button:hover{
 .footer__item--pages a{
     margin-top: 1em;
 }
+
+@media (max-width: 480px){
+    body {
+        width: 100vmax;
+    }
+    button{
+        font-size: 1.5rem;  
+        height: fit-content;
+    }
+    .header{
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+    .projects__item{
+        flex-direction: column-reverse;
+    }
+    .projects__item--details{
+        padding: 0 2rem;
+    }
+    .projects__item--details p{
+        margin: 0;
+        font-size: 1.5rem;
+        word-spacing: 0.3rem;
+        line-height: 1.7rem;
+    }
+    .aboutMe__item{
+        text-align: center;
+        width: 25%;
+        height: fit-content;
+    }
+    .footer{
+        font-size: 1rem;
+    }
+}
