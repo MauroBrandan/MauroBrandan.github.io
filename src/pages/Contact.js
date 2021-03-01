@@ -5,6 +5,7 @@ import linkedin from '../static/linkedin.svg'
 import github from '../static/github.svg'
 
 const Contact = () => {
+    window.scroll(0, 0);
     const view = `
         <div class="main">
             <section class="contact">

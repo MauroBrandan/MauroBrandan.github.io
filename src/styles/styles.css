@@ -143,7 +143,8 @@ button:hover{
 
 .contact{
     display: flex;
-    justify-content: space-between;
+    flex-direction: column-reverse;
+    align-items: center;
     padding: 5em 5em;
 }
 
@@ -156,12 +157,12 @@ button:hover{
 }
 
 .contact__aboutMe--bio{
-    width: 25em;
+    width: 55vw;
     align-self: center;
     text-align: center;
     border: 2px solid var(--color);
     border-radius: 3em;
-    margin-bottom: 3em;
+    margin-bottom: 3rem;
 }
 
 .contact__aboutMe--bio:hover{
@@ -190,10 +191,11 @@ button:hover{
 }
 
 .contact__img{
-    width: fit-content;
-    height: fit-content;
-    object-fit: contain;
-    border-radius: 2em;
+    width: 25rem;
+    height: 25rem;
+    object-fit: none;
+    border-radius: 50%;
+    margin-bottom: 3rem;
 }
 
 .footer{
@@ -287,5 +289,19 @@ button:hover{
         text-align: center;
         width: 25%;
         height: fit-content;
+    }
+    .contact__aboutMe--bio{
+        width: 100vw;
+        font-size: 1.5rem;
+        word-spacing: 0.3rem;
+        line-height: 1.7rem;
+    }
+    .contact__aboutMe--socialMedia{
+        font-size: 1.5rem;
+        width: max-content;
+    }
+    .contact__aboutMe--socialMedia img{
+        width: 5rem;
+        height: 5rem;
     }
 }
