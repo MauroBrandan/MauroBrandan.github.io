@@ -165,11 +165,6 @@ button:hover{
     margin-bottom: 3rem;
 }
 
-.contact__aboutMe--bio:hover{
-    transition: 305ms;
-    transform: scale(1.2);
-}
-
 .contact__aboutMe--socialMedia{
     text-align: center;
     width: fit-content;
@@ -242,37 +237,6 @@ button:hover{
     margin-top: 1em;
 }
 
-@media (max-width: 480px){
-    body {
-        width: 100vmax;
-    }
-    button{
-        font-size: 1.5rem;  
-        height: fit-content;
-    }
-    .header{
-        justify-content: space-around;
-        flex-wrap: wrap;
-    }
-    .projects__item{
-        flex-direction: column-reverse;
-    }
-    .projects__item--details{
-        padding: 0 2rem;
-    }
-    .projects__item--details p{
-        margin: 0;
-        font-size: 1.5rem;
-        word-spacing: 0.3rem;
-        line-height: 1.7rem;
-    }
-    .aboutMe__item{
-        text-align: center;
-        width: 25%;
-        height: fit-content;
-    }
-}
-
 @media(max-width: 830px){
     body {
         width: 1000px;
@@ -284,6 +248,11 @@ button:hover{
     .header{
         justify-content: space-around;
         flex-wrap: wrap;
+    }
+    .projects__item--details p{
+        font-size: 1rem;
+        word-spacing: 0.1rem;
+        line-height: 1.5rem;
     }
     .aboutMe__item{
         text-align: center;
@@ -303,5 +272,47 @@ button:hover{
     .contact__aboutMe--socialMedia img{
         width: 5rem;
         height: 5rem;
+    }
+}
+
+@media (max-width: 555px){
+    body {
+        width: 100vmax;
+    }
+    button{
+        font-size: 2rem;
+    }
+    .main__item{
+        font-size: 2.5rem;
+    }
+    .projects__item{
+        flex-direction: column-reverse;
+    }
+    .projects__item--details{
+        padding: 0 2rem;
+    }
+    .projects__item--details h2{
+        font-size: 3rem;
+    }
+    .projects__item--details p{
+        margin: 0;
+        font-size: 2.5rem;
+        word-spacing: 0.3rem;
+        line-height: 2.5rem;
+    }
+    .aboutMe{
+        flex-direction: column;
+        align-items: center;
+        font-size: 1.5rem;
+    }
+    .aboutMe__item{
+        width: 65%;
+    }
+    .aboutMe__item--details{
+        font-size: 2.5rem;
+    }
+    .contact__aboutMe--bio{
+        width: 150vw;
+        line-height: 2.5rem;
     }
 }
