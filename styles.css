@@ -143,7 +143,8 @@ button:hover{
 
 .contact{
     display: flex;
-    justify-content: space-between;
+    flex-direction: column-reverse;
+    align-items: center;
     padding: 5em 5em;
 }
 
@@ -156,17 +157,12 @@ button:hover{
 }
 
 .contact__aboutMe--bio{
-    width: 25em;
+    width: 55vw;
     align-self: center;
     text-align: center;
     border: 2px solid var(--color);
     border-radius: 3em;
-    margin-bottom: 3em;
-}
-
-.contact__aboutMe--bio:hover{
-    transition: 305ms;
-    transform: scale(1.2);
+    margin-bottom: 3rem;
 }
 
 .contact__aboutMe--socialMedia{
@@ -190,10 +186,11 @@ button:hover{
 }
 
 .contact__img{
-    width: fit-content;
-    height: fit-content;
-    object-fit: contain;
-    border-radius: 2em;
+    width: 25rem;
+    height: 25rem;
+    object-fit: none;
+    border-radius: 50%;
+    margin-bottom: 3rem;
 }
 
 .footer{
@@ -238,4 +235,84 @@ button:hover{
 
 .footer__item--pages a{
     margin-top: 1em;
+}
+
+@media(max-width: 830px){
+    body {
+        width: 1000px;
+    }
+    button{
+        font-size: 1.5rem;  
+        height: fit-content;
+    }
+    .header{
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+    .projects__item--details p{
+        font-size: 1rem;
+        word-spacing: 0.1rem;
+        line-height: 1.5rem;
+    }
+    .aboutMe__item{
+        text-align: center;
+        width: 25%;
+        height: fit-content;
+    }
+    .contact__aboutMe--bio{
+        width: 100vw;
+        font-size: 1.5rem;
+        word-spacing: 0.3rem;
+        line-height: 1.7rem;
+    }
+    .contact__aboutMe--socialMedia{
+        font-size: 1.5rem;
+        width: max-content;
+    }
+    .contact__aboutMe--socialMedia img{
+        width: 5rem;
+        height: 5rem;
+    }
+}
+
+@media (max-width: 555px){
+    body {
+        width: 100vmax;
+    }
+    button{
+        font-size: 2rem;
+    }
+    .main__item{
+        font-size: 2.5rem;
+    }
+    .projects__item{
+        flex-direction: column-reverse;
+    }
+    .projects__item--details{
+        padding: 0 2rem;
+    }
+    .projects__item--details h2{
+        font-size: 3rem;
+    }
+    .projects__item--details p{
+        margin: 0;
+        font-size: 2.5rem;
+        word-spacing: 0.3rem;
+        line-height: 2.5rem;
+    }
+    .aboutMe{
+        flex-direction: column;
+        align-items: center;
+        font-size: 1.5rem;
+    }
+    .aboutMe__item{
+        width: 65%;
+    }
+    .aboutMe__item--details{
+        font-size: 2.5rem;
+    }
+    .contact__aboutMe--bio{
+        width: 150vw;
+        line-height: 2.5rem;
+    }
 }
