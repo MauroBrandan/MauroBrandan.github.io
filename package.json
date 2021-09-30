@@ -1,0 +1,40 @@
+{
+	"name": "maurobrandan",
+	"version": "2.0.0",
+	"description": "Personal portfolio",
+	"main": "index.js",
+	"scripts": {
+		"build": "webpack --mode production",
+		"start": "webpack serve --open --mode development",
+		"start:mobile": "webpack serve --open --mode development --host 192.168.1.4"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/MauroBrandan/MauroBrandan.github.io.git"
+	},
+	"keywords": [],
+	"author": "Mauro Brandan <maurobrandan.mb@gmail.com>",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/MauroBrandan/MauroBrandan.github.io/issues"
+	},
+	"homepage": "https://maurobrandan.com",
+	"dependencies": {
+		"react": "^17.0.2",
+		"react-dom": "^17.0.2"
+	},
+	"devDependencies": {
+		"@babel/core": "^7.15.5",
+		"@babel/preset-env": "^7.15.6",
+		"@babel/preset-react": "^7.14.5",
+		"babel-loader": "^8.2.2",
+		"css-loader": "^6.3.0",
+		"file-loader": "^6.2.0",
+		"html-loader": "^2.1.2",
+		"html-webpack-plugin": "^5.3.2",
+		"mini-css-extract-plugin": "^2.3.0",
+		"webpack": "^5.55.1",
+		"webpack-cli": "^4.8.0",
+		"webpack-dev-server": "^4.3.0"
+	}
+}
