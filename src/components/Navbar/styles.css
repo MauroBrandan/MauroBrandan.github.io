@@ -1,0 +1,19 @@
+.Navbar {
+	position: fixed;
+	width: 88px;
+	height: 100vh;
+	padding: 4px;
+	display: flex;
+	align-items: center;
+	background-color: var(--primary-color);
+}
+
+.Navbar ul li {
+	margin: 32px 0;
+}
+
+.Navbar ul li:hover {
+	cursor: pointer;
+	color: var(--accent-color);
+	transition: 0.5s 0s ease;
+}
