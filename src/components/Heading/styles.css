@@ -1,0 +1,17 @@
+.Heading {
+	margin: 0;
+	font-weight: bold;
+	font-size: 2rem;
+}
+
+.size-big {
+	font-size: 2.5rem;
+}
+
+.size-medium {
+	font-size: 2rem;
+}
+
+.size-small {
+	font-size: 1.5rem;
+}
