@@ -1,0 +1,21 @@
+.Icon {
+	width: 120px;
+	height: 120px;
+	border-radius: 50%;
+	object-fit: contain;
+}
+
+.Icon.small {
+	width: 80px;
+	height: 80px;
+}
+
+.Icon.medium {
+	width: 120px;
+	height: 120px;
+}
+
+.Icon.big {
+	width: 160px;
+	height: 160px;
+}
