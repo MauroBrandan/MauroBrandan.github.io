@@ -4,5 +4,17 @@
 	border-radius: 8px;
 	color: var(--secondary-color);
 	font-family: 'Montserrat', sans-serif;
-	background-color: var(--accent-color);
+	font-weight: 700;
+	background-image: var(--linear-gradient);
+	background-size: 200% auto;
+}
+
+.Button:hover {
+	cursor: pointer;
+	background-position: right center;
+	background-size: 100%;
+}
+
+.Button:active {
+	box-shadow: -4px -4px 4px 0px rgb(0 0 0 / 50%) inset;
 }

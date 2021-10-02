@@ -1,11 +1,12 @@
 .Navbar {
 	position: fixed;
-	width: 88px;
+	width: 95px;
 	height: 100vh;
 	padding: 4px;
 	display: flex;
 	align-items: center;
 	background-color: var(--primary-color);
+	font-weight: 700;
 }
 
 .Navbar ul li {

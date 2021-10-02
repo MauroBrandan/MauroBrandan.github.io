@@ -1,0 +1,44 @@
+.ProjectCard {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	z-index: 1;
+}
+
+.ProjectCard__info {
+	opacity: 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-around;
+	gap: 24px;
+	text-align: center;
+	transition: opacity 0.5s 0s ease-out;
+}
+
+.ProjectCard::before {
+	opacity: 0;
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: var(--shadow-gradient);
+	z-index: -1;
+	transition: opacity 0.5s 0s ease-out;
+}
+
+.ProjectCard:hover::before {
+	opacity: 1;
+}
+
+.ProjectCard:hover > .ProjectCard__info {
+	opacity: 1;
+}

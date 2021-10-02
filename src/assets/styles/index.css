@@ -1,7 +1,19 @@
 :root {
 	--primary-color: #010101;
 	--secondary-color: #faf5ff;
-	--accent-color: #8c30f5;
+	--accent-color: #da22ff;
+	--linear-gradient: linear-gradient(
+		to right,
+		#da22ff 0%,
+		#9733ee 51%,
+		#da22ff 100%
+	);
+	--shadow-gradient: linear-gradient(
+		180deg,
+		rgba(0, 0, 0, 0) 0%,
+		rgba(0, 0, 0, 0.5) 44%,
+		rgba(0, 0, 0, 1) 88%
+	);
 }
 
 html {
