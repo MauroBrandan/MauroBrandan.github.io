@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 
 //Components
 import Button from '../components/Button'
@@ -20,17 +20,33 @@ import projectImage from '../assets/static/project.png'
 import Home from './Home'
 
 function App() {
+	const [width, setWidth] = useState(window.innerWidth)
+
+	const onResize = () => {
+		setWidth(window.innerWidth)
+	}
+
+	useEffect(() => {
+		window.addEventListener('resize', onResize)
+
+		return () => {
+			window.removeEventListener('resize', onResize)
+		}
+	}, [width])
+
+	const iconSize = width > 1205 ? 'medium' : 'small'
+
 	return (
 		<Home>
 			<Navbar />
 			<Hero />
 			<main>
 				<SectionMain title='Skills'>
-					<Icon>{HtmlIcon}</Icon>
-					<Icon>{CssIcon}</Icon>
-					<Icon>{JsIcon}</Icon>
-					<Icon>{ReactIcon}</Icon>
-					<Icon>{HtmlIcon}</Icon>
+					<Icon size={iconSize}>{HtmlIcon}</Icon>
+					<Icon size={iconSize}>{CssIcon}</Icon>
+					<Icon size={iconSize}>{JsIcon}</Icon>
+					<Icon size={iconSize}>{ReactIcon}</Icon>
+					<Icon size={iconSize}>{HtmlIcon}</Icon>
 				</SectionMain>
 				<SectionMain title='Proyectos'>
 					<ProjectCard image={projectImage}>Nombre del proyecto</ProjectCard>

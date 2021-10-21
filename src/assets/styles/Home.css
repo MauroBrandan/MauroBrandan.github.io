@@ -36,3 +36,75 @@
 .Home .ProjectCard:nth-child(3) {
 	grid-row: 2 / 4;
 }
+
+@media only screen and (max-width: 1255px) {
+	.Home .SectionMain:nth-child(1) .children-container {
+		width: 90%;
+	}
+
+	.Home .SectionMain:nth-child(2) .children-container {
+		width: 90%;
+	}
+}
+
+@media only screen and (max-width: 1024px) {
+	.Home {
+		grid-template-columns: 88px 1fr;
+	}
+
+	.Home .Hero {
+		height: 100vh;
+	}
+
+	.Home main {
+		grid-column: 2 / 3;
+		grid-template-rows: auto;
+	}
+
+	.Home .SectionMain:nth-child(1) {
+		height: 30vh;
+	}
+
+	.Home .SectionMain:nth-child(2) {
+		height: 70vh;
+	}
+}
+
+@media only screen and (max-width: 555px) {
+	.Home {
+		grid-template-columns: 1fr;
+	}
+
+	.Home .Navbar {
+		display: none;
+	}
+
+	.Home .SectionMain:nth-child(1) {
+		height: max-content;
+	}
+
+	.Home .SectionMain:nth-child(2) {
+		height: max-content;
+	}
+
+	.Home .SectionMain:nth-child(1) .children-container {
+		justify-content: center;
+		gap: 24px;
+		flex-wrap: wrap;
+	}
+
+	.Home .SectionMain:nth-child(2) .children-container {
+		grid-template-columns: 1fr;
+		grid-template-rows: 220px 220px;
+	}
+
+	.Home .ProjectCard:nth-child(2),
+	.Home .ProjectCard:nth-child(4) {
+		display: none;
+	}
+
+	.Home .ProjectCard:nth-child(1),
+	.Home .ProjectCard:nth-child(3) {
+		grid-row: auto;
+	}
+}
