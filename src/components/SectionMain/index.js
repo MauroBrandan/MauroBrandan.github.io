@@ -1,6 +1,15 @@
-import React, { Children } from 'react'
+import React from 'react'
 import './styles.css'
 
-export default function SectionMain({ children }) {
-	return <section className='SectionMain'>{children}</section>
+import TitleHeader from '../TitleHeader'
+import Button from '../Button'
+
+export default function SectionMain({ children, title }) {
+	return (
+		<section className='SectionMain'>
+			<TitleHeader>{title}</TitleHeader>
+			<div className='children-container'>{children}</div>
+			<Button>Ver más</Button>
+		</section>
+	)
 }

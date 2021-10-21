@@ -6,7 +6,7 @@
 	"scripts": {
 		"build": "webpack --mode production",
 		"start": "webpack serve --open --mode development",
-		"start:mobile": "webpack serve --open --mode development --host 192.168.1.4"
+		"start:mobile": "webpack serve --open --mode development --host 127.0.0.1"
 	},
 	"repository": {
 		"type": "git",

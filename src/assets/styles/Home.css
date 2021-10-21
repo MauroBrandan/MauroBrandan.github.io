@@ -1,0 +1,38 @@
+.Home {
+	display: grid;
+	grid-template-columns: 88px calc(40% - 88px) auto;
+	height: 100vh;
+}
+
+.Home .Hero {
+	grid-column: 2/3;
+}
+
+.Home main {
+	display: grid;
+	grid-template-rows: 35% 65%;
+}
+
+.Home .SectionMain:nth-child(1) .children-container {
+	display: flex;
+	justify-content: space-between;
+	width: 80%;
+}
+
+.Home .SectionMain:nth-child(2) .children-container {
+	width: 80%;
+	height: 100%;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: calc(35% - 12px) calc(30% - 12px) calc(35% - 12px);
+	gap: 12px;
+}
+
+.Home .ProjectCard:nth-child(1) {
+	grid-column: 1 / 2;
+	grid-row: 1 / 3;
+}
+
+.Home .ProjectCard:nth-child(3) {
+	grid-row: 2 / 4;
+}
