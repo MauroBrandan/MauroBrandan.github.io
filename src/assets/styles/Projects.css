@@ -1,0 +1,18 @@
+.Projects {
+	display: grid;
+	grid-template-columns: 88px auto;
+}
+
+.Projects > .TitleHeader {
+	grid-column: 2/4;
+}
+
+.Projects .Project {
+	margin-top: 60px;
+}
+
+@media only screen and (max-width: 555px) {
+	.Projects {
+		grid-template-columns: 1fr;
+	}
+}

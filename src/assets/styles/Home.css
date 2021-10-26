@@ -1,11 +1,11 @@
 .Home {
 	display: grid;
 	grid-template-columns: 88px calc(40% - 88px) auto;
-	height: 100vh;
 }
 
 .Home .Hero {
 	grid-column: 2/3;
+	height: 100vh;
 }
 
 .Home main {
@@ -73,10 +73,6 @@
 @media only screen and (max-width: 555px) {
 	.Home {
 		grid-template-columns: 1fr;
-	}
-
-	.Home .Navbar {
-		display: none;
 	}
 
 	.Home .SectionMain:nth-child(1) {
