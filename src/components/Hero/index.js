@@ -1,8 +1,8 @@
 import React from 'react'
 import './styles.css'
-import HeroImage from '../../assets/static/perfil.jpg'
-import GithubIcon from '../../assets/static/github.svg'
-import LinkedinIcon from '../../assets/static/linkedin.svg'
+import HeroImage from '../../assets/static/images/perfil.jpg'
+import GithubIcon from '../../assets/static/icons/github.svg'
+import LinkedinIcon from '../../assets/static/icons/linkedin.svg'
 
 export default function index() {
 	return (

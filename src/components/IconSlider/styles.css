@@ -1,0 +1,29 @@
+.IconSlider {
+	height: 100px;
+	margin: auto;
+	overflow: hidden;
+	position: relative;
+	width: 960px;
+}
+
+.IconSlider__wrapper {
+	animation: scroll 15s linear infinite;
+	display: flex;
+	width: calc(250px * 7);
+}
+
+.IconSlider__wrapper .Icon {
+	height: 100px;
+	width: 250px;
+	margin: 0 32px;
+	border-radius: 0;
+}
+
+@keyframes scroll {
+	0% {
+		transform: translateX(0);
+	}
+	100% {
+		transform: translateX(calc(-250px * 5));
+	}
+}
