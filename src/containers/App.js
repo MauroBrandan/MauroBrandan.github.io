@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from 'react'
 
 //Components
-import Button from '../components/Button'
-import TitleHeader from '../components/TitleHeader'
 import Navbar from '../components/Navbar'
 import SectionMain from '../components/SectionMain'
 import Icon from '../components/Icon'
@@ -27,6 +25,7 @@ import projectImage from '../assets/static/images/project.png'
 // Containers
 import Home from './Home'
 import Projects from './Projects'
+import Contact from './Contact'
 
 function App() {
 	const [width, setWidth] = useState(window.innerWidth)
@@ -94,6 +93,7 @@ function App() {
 					facere soluta, fugiat quis mollitia illo, incidunt doloribus ab esse! Odit?
 				</Project>
 			</Projects>
+			<Contact />
 		</>
 	)
 }
