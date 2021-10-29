@@ -23,11 +23,11 @@
 	stroke: var(--primary-color);
 }
 
-.Contact__info svg:nth-child(1) {
+.Contact__info a:nth-child(1) svg {
 	border-radius: 50%;
 }
 
-.Contact__info svg:nth-child(2) {
+.Contact__info a:nth-child(2) svg {
 	border-radius: 12px;
 }
 

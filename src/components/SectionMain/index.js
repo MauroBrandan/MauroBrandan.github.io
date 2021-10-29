@@ -4,12 +4,14 @@ import './styles.css'
 import TitleHeader from '../TitleHeader'
 import Button from '../Button'
 
-export default function SectionMain({ children, title, btntext }) {
+export default function SectionMain({ children, title, btntext, btnlink }) {
 	return (
 		<section className='SectionMain'>
 			<TitleHeader>{title}</TitleHeader>
 			<div className='children-container'>{children}</div>
-			<Button>{btntext}</Button>
+			<a href={btnlink}>
+				<Button>{btntext}</Button>
+			</a>
 		</section>
 	)
 }

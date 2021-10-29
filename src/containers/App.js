@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 
 //Components
 import Navbar from '../components/Navbar'
@@ -28,29 +28,14 @@ import Projects from './Projects'
 import Contact from './Contact'
 
 function App() {
-	const [width, setWidth] = useState(window.innerWidth)
-
-	const onResize = () => {
-		setWidth(window.innerWidth)
-	}
-
-	useEffect(() => {
-		window.addEventListener('resize', onResize)
-
-		return () => {
-			window.removeEventListener('resize', onResize)
-		}
-	}, [width])
-
-	const iconSize = width > 1205 ? 'medium' : 'small'
-
 	return (
 		<>
 			<Navbar />
+
 			<Home>
 				<Hero />
 				<main>
-					<SectionMain title='Skills' btntext='Hablemos'>
+					<SectionMain title='Skills' btntext='Hablemos' btnlink='/#Contacto'>
 						<IconSlider>
 							<Icon>{HtmlIcon}</Icon>
 							<Icon>{CssIcon}</Icon>
@@ -64,35 +49,38 @@ function App() {
 							<Icon>{FigmaIcon}</Icon>
 						</IconSlider>
 					</SectionMain>
-					<SectionMain title='Proyectos' btntext='Ver más'>
-						<ProjectCard image={projectImage}>Nombre del proyecto</ProjectCard>
-						<ProjectCard image={projectImage}>Nombre del proyecto</ProjectCard>
-						<ProjectCard image={projectImage}>Nombre del proyecto</ProjectCard>
-						<ProjectCard image={projectImage}>Nombre del proyecto</ProjectCard>
+					<SectionMain title='Proyectos Principales' btntext='Ver más' btnlink='/#Proyectos'>
+						<ProjectCard image={projectImage} btnlink='/#PlatziVideo'>Platzi Video</ProjectCard>
+						<ProjectCard image={projectImage} btnlink='/#Batatabit'>Batatabit</ProjectCard>
+						<ProjectCard image={projectImage} btnlink='/#TodoMine'>Todo Mine</ProjectCard>
+						<ProjectCard image={projectImage} btnlink='/#100tifico'>100tifico</ProjectCard>
 					</SectionMain>
 				</main>
 			</Home>
+
 			<Projects>
-				<Project
-					title='Platzi Video'
-					img={projectImage}
-					icons={[HtmlIcon, CssIcon, JsIcon]}
-				>
+				<Project title='Platzi Video' img={projectImage} icons={[HtmlIcon, CssIcon, JsIcon]} id='PlatziVideo' links={['https://platzi-video-mb.herokuapp.com/', 'https://github.com/MauroBrandan/PlatziVideo']}>
 					Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates
 					architecto facilis eos odit consequuntur blanditiis quia accusamus quam aut
 					facere soluta, fugiat quis mollitia illo, incidunt doloribus ab esse! Odit?
 				</Project>
-				<Project title='Batatabit' img={projectImage} icons={[HtmlIcon, CssIcon]}>
+				<Project title='Batatabit' img={projectImage} icons={[HtmlIcon, CssIcon]} id='Batatabit' links={['https://maurobrandan.com/Batatabit/', 'https://github.com/MauroBrandan/Batatabit']}>
 					Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates
 					architecto facilis eos odit consequuntur blanditiis quia accusamus quam aut
 					facere soluta, fugiat quis mollitia illo, incidunt doloribus ab esse! Odit?
 				</Project>
-				<Project title='Todo Mine' img={projectImage} icons={[ReactIcon]}>
+				<Project title='Todo Mine' img={projectImage} icons={[ReactIcon]} id='TodoMine' links={['https://maurobrandan.com/TodoMine/', 'https://github.com/MauroBrandan/TodoMine']}>
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates
+					architecto facilis eos odit consequuntur blanditiis quia accusamus quam aut
+					facere soluta, fugiat quis mollitia illo, incidunt doloribus ab esse! Odit?
+				</Project>
+				<Project title='100tifico' img={projectImage} icons={[ReactIcon]} id='100tifico' links={['https://maurobrandan.com/100tifico/', 'https://github.com/MauroBrandan/100tifico']}>
 					Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates
 					architecto facilis eos odit consequuntur blanditiis quia accusamus quam aut
 					facere soluta, fugiat quis mollitia illo, incidunt doloribus ab esse! Odit?
 				</Project>
 			</Projects>
+
 			<Contact />
 		</>
 	)

@@ -7,7 +7,7 @@
 	flex-direction: column;
 	justify-content: flex-end;
 	align-items: center;
-	gap: 32px;
+	gap: 16px;
 	padding-bottom: 60px;
 	background-repeat: no-repeat;
 	background-position: center;
@@ -33,6 +33,7 @@
 
 .Hero__title {
 	text-align: center;
+	font-size: 1.5rem;
 	z-index: 2;
 }
 

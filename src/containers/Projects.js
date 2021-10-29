@@ -5,7 +5,7 @@ import TitleHeader from '../components/TitleHeader'
 
 function Projects({ children }) {
 	return (
-		<section className='Projects'>
+		<section className='Projects' id='Proyectos'>
 			<TitleHeader position='center' size='big'>
 				Proyectos
 			</TitleHeader>
