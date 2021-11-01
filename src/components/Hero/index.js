@@ -4,7 +4,7 @@ import HeroImage from '../../assets/static/images/perfil.jpg'
 import GithubIcon from '../../assets/static/icons/github.svg'
 import LinkedinIcon from '../../assets/static/icons/linkedin.svg'
 
-export default function index() {
+export default function Hero() {
 	return (
 		<section className='Hero' style={{ backgroundImage: `url(${HeroImage})` }}>
 			<div className='Hero__title'>
@@ -13,10 +13,11 @@ export default function index() {
 				</h1>
 			</div>
 			<p className='Hero__description'>
-				Loremsimply dummy text of the printing and typesetting industry. Lorem Ipsum
-				has been the industry's standard dummy text ever since the 1500s, when an
-				unknown printer took a galley of type and scrambled it to make a type
-				specimen book. It has survived not only
+				Estudiante de Ingeniería en Sistemas y autodidacta apasionado por el
+				desarrollo de aplicaciones web y el diseño de interfaces. Manejo las
+				tecnologías fundamentales de la web así como también sus frameworks,
+				especializado en React. Además tengo conocimientos sobre diseño de base de
+				datos y tecnologías Backend, especialmente en Node.
 			</p>
 			<div className='Hero__social'>
 				<a

@@ -21,12 +21,6 @@
 	object-fit: cover;
 }
 
-.Project__stack {
-	display: flex;
-	justify-content: space-around;
-	width: 50%;
-}
-
 .Project__info {
 	grid-column-start: 2;
 	grid-row-start: 2;
@@ -40,6 +34,13 @@
 	color: var(--primary-color);
 }
 
+.Project__stack {
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+	width: 55%;
+}
+
 .Project__descriprion {
 	width: 50%;
 	text-align: center;
@@ -51,15 +52,9 @@
 
 @media only screen and (max-width: 1024px) {
 	.Project {
-		grid-template-rows: 71px calc(50vh - 71px);
-		height: fit-content;
-	}
-}
-
-@media only screen and (max-width: 555px) {
-	.Project {
 		display: flex;
 		flex-direction: column;
+		height: fit-content;
 	}
 	.Project__img {
 		margin-top: 32px;
