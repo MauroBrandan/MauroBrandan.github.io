@@ -3,7 +3,6 @@ import React from 'react'
 //Components
 import Navbar from '../components/Navbar'
 import SectionMain from '../components/SectionMain'
-import Icon from '../components/Icon'
 import ProjectCard from '../components/ProjectCard'
 import Hero from '../components/Hero'
 import Project from '../components/Project'
@@ -22,9 +21,6 @@ import ReactIcon from '../assets/static/icons/react-icon.png'
 import NodeIcon from '../assets/static/icons/node-icon.png'
 import MongoIcon from '../assets/static/icons/mongo-icon.png'
 import ExpressIcon from '../assets/static/icons/express-icon.png'
-import WebpackIcon from '../assets/static/icons/webpack-icon.png'
-import WordpressIcon from '../assets/static/icons/wordpress-icon.png'
-import FigmaIcon from '../assets/static/icons/figma-icon.png'
 
 // Images
 import platzivideoImage from '../assets/static/images/platzivideo.jpg'
@@ -41,24 +37,25 @@ function App() {
 				<Hero />
 				<main>
 					<SectionMain title='Skills' btntext='Hablemos' btnlink='/#Contacto'>
-						<IconSlider>
-							<Icon>{HtmlIcon}</Icon>
-							<Icon>{CssIcon}</Icon>
-							<Icon>{JsIcon}</Icon>
-							<Icon>{ReactIcon}</Icon>
-							<Icon>{NodeIcon}</Icon>
-							<Icon>{WebpackIcon}</Icon>
-							<Icon>{MongoIcon}</Icon>
-							<Icon>{WordpressIcon}</Icon>
-							<Icon>{ExpressIcon}</Icon>
-							<Icon>{FigmaIcon}</Icon>
-						</IconSlider>
+						<IconSlider />
 					</SectionMain>
-					<SectionMain title='Proyectos Principales' btntext='Ver más' btnlink='/#Proyectos'>
-						<ProjectCard image={platzivideoImage} btnlink='/#PlatziVideo'>Platzi Video</ProjectCard>
-						<ProjectCard image={batatabitImage} btnlink='/#Batatabit'>Batatabit</ProjectCard>
-						<ProjectCard image={todomineImage} btnlink='/#TodoMine'>Todo Mine</ProjectCard>
-						<ProjectCard image={cientificoImage} btnlink='/#100tifico'>100tifico</ProjectCard>
+					<SectionMain
+						title='Proyectos Principales'
+						btntext='Ver más'
+						btnlink='/#Proyectos'
+					>
+						<ProjectCard image={platzivideoImage} btnlink='/#PlatziVideo'>
+							Platzi Video
+						</ProjectCard>
+						<ProjectCard image={batatabitImage} btnlink='/#Batatabit'>
+							Batatabit
+						</ProjectCard>
+						<ProjectCard image={todomineImage} btnlink='/#TodoMine'>
+							Todo Mine
+						</ProjectCard>
+						<ProjectCard image={cientificoImage} btnlink='/#100tifico'>
+							100tifico
+						</ProjectCard>
 					</SectionMain>
 				</main>
 			</Home>
