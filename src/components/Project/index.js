@@ -5,9 +5,9 @@ import TitleHeader from '../TitleHeader'
 import Icon from '../Icon'
 import Button from '../Button'
 
-export default function Project({ title, img, icons, children, id, links }) {
+export default function Project({ title, img, icons, children, links }) {
 	return (
-		<section className='Project' id={id}>
+		<section className='Project'>
 			<TitleHeader>{title}</TitleHeader>
 			<img className='Project__img' src={img} alt={title} />
 			<div className='Project__info'>
