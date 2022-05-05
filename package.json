@@ -22,7 +22,8 @@
 	"homepage": "https://maurobrandan.com",
 	"dependencies": {
 		"react": "17.0.2",
-		"react-dom": "17.0.2"
+		"react-dom": "17.0.2",
+		"react-lazy-load-image-component": "^1.5.4"
 	},
 	"devDependencies": {
 		"@babel/core": "7.15.5",
@@ -37,6 +38,6 @@
 		"mini-css-extract-plugin": "2.3.0",
 		"webpack": "5.55.1",
 		"webpack-cli": "4.8.0",
-		"webpack-dev-server": "4.3.0"
+		"webpack-dev-server": "^4.9.0"
 	}
 }
