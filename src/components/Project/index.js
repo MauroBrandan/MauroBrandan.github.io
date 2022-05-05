@@ -1,6 +1,4 @@
 import React from 'react'
-import { LazyLoadImage } from 'react-lazy-load-image-component'
-import 'react-lazy-load-image-component/src/effects/blur.css'
 import './styles.css'
 
 import TitleHeader from '../TitleHeader'
@@ -11,7 +9,7 @@ export default function Project({ id, title, img, icons, children, links }) {
 	return (
 		<section className='Project' id={id}>
 			<TitleHeader>{title}</TitleHeader>
-			<LazyLoadImage className='Project__img' src={img} alt={title} effect='blur' />
+			<img className='Project__img' src={img} alt={title} />
 			<div className='Project__info'>
 				<div className='Project__stack'>
 					{icons.map((icon) => (
