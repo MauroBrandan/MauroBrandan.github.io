@@ -229,7 +229,6 @@ ul {
 
 .Hero__description {
 	width: 80%;
-	text-align: center;
 	line-height: 32px;
 	z-index: 2;
 }
@@ -453,6 +452,24 @@ ul {
 	}
 }
 
+.lazy-load-image-background.blur {
+  filter: blur(15px);
+}
+
+.lazy-load-image-background.blur.lazy-load-image-loaded {
+  filter: blur(0);
+  transition: filter .3s;
+}
+
+.lazy-load-image-background.blur > img {
+  opacity: 0;
+}
+
+.lazy-load-image-background.blur.lazy-load-image-loaded > img {
+  opacity: 1;
+  transition: opacity .3s;
+}
+
 .Project {
 	grid-column: 2/4;
 
@@ -467,19 +484,24 @@ ul {
 	border-bottom-right-radius: 12px;
 }
 
-.Project__img {
+.Project > span {
 	grid-column: 1/2;
 	grid-row-start: 2;
 	align-self: center;
 	justify-self: center;
-
 	width: 90%;
 	height: 45%;
 	max-width: 700px;
 	max-height: 400px;
 	border-radius: 32px;
-	object-fit: cover;
 	box-shadow: 10px 10px 13px -5px rgba(0, 0, 0, 0.25);
+}
+
+.Project__img {
+	width: 100%;
+	height: 100%;
+	border-radius: 32px;
+	object-fit: cover;
 }
 
 .Project__info {
@@ -504,7 +526,6 @@ ul {
 
 .Project__descriprion {
 	width: 50%;
-	text-align: center;
 }
 
 .Project__buttons .Button {
