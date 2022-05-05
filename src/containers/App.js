@@ -30,10 +30,10 @@ function App() {
 						<IconSlider />
 					</SectionMain>
 					<SectionMain title='Proyectos Principales' btntext='Ver más' btnlink='/#Proyectos'>
-						<ProjectCard image={platzivideoImage} btnlink='/#PlatziVideo'>Platzi Video</ProjectCard>
-						<ProjectCard image={batatabitImage} btnlink='/#Batatabit'>Batatabit</ProjectCard>
-						<ProjectCard image={todomineImage} btnlink='/#TodoMine'>Todo Mine</ProjectCard>
-						<ProjectCard image={cientificoImage} btnlink='/#100tifico'>100tifico</ProjectCard>
+						<ProjectCard image={platzivideoImage} btnlink='/#platzivideo'>Platzi Video</ProjectCard>
+						<ProjectCard image={batatabitImage} btnlink='/#batatabit'>Batatabit</ProjectCard>
+						<ProjectCard image={todomineImage} btnlink='/#todoMine'>Todo Mine</ProjectCard>
+						<ProjectCard image={cientificoImage} btnlink='/#cientifico'>100tifico</ProjectCard>
 					</SectionMain>
 				</main>
 			</Home>

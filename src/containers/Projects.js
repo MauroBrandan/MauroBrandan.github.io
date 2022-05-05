@@ -79,6 +79,7 @@ function Projects() {
 			{projects.map((project) => (
 				<Project
 					key={project.id}
+					id={project.id}
 					title={project.title}
 					img={project.image}
 					icons={project.icons}

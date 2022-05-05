@@ -14,8 +14,9 @@ export default function Hero() {
 			</div>
 			<p className='Hero__description'>
 				Estudiante de Ingeniería en Sistemas y autodidacta apasionado por el
-				desarrollo de aplicaciones web y el diseño de interfaces. Manejo las
-				tecnologías fundamentales de la web así como también sus frameworks,
+				desarrollo de aplicaciones web y el diseño de interfaces.
+				<br />
+				Manejo las tecnologías fundamentales de la web y sus frameworks,
 				especializado en React. Además tengo conocimientos sobre diseño de base de
 				datos y tecnologías Backend, especialmente en Node.
 			</p>
