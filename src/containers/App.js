@@ -32,7 +32,7 @@ function App() {
 					<SectionMain title='Proyectos Principales' btntext='Ver más' btnlink='/#Proyectos'>
 						<ProjectCard image={platzivideoImage} btnlink='/#platzivideo'>Platzi Video</ProjectCard>
 						<ProjectCard image={batatabitImage} btnlink='/#batatabit'>Batatabit</ProjectCard>
-						<ProjectCard image={todomineImage} btnlink='/#todoMine'>Todo Mine</ProjectCard>
+						<ProjectCard image={todomineImage} btnlink='/#todomine'>Todo Mine</ProjectCard>
 						<ProjectCard image={cientificoImage} btnlink='/#cientifico'>100tifico</ProjectCard>
 					</SectionMain>
 				</main>
