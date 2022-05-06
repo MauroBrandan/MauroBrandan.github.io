@@ -6,7 +6,7 @@ import TitleHeader from '../components/TitleHeader'
 function Contact() {
 	return (
 		<section className='Contact' id='Contacto'>
-			<TitleHeader position='center' size='big'>
+			<TitleHeader position='center' size='big' theme='secondary'>
 				Contacto
 			</TitleHeader>
 			<div className='Contact__info'>

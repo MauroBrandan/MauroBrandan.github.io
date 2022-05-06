@@ -8,6 +8,8 @@
 
 .Contact > .TitleHeader {
 	grid-column: 2/4;
+	height: 90px;
+	padding: 16px;
 }
 
 .Contact__info {

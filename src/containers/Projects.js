@@ -73,7 +73,7 @@ const projects = [
 function Projects() {
 	return (
 		<section className='Projects' id='Proyectos'>
-			<TitleHeader position='center' size='big'>
+			<TitleHeader position='center' size='big' theme='secondary'>
 				Proyectos
 			</TitleHeader>
 			{projects.map((project) => (

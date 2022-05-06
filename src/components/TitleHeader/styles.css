@@ -4,10 +4,17 @@
 	background-color: var(--primary-color);
 }
 
-.center {
+.TitleHeader.center {
 	text-align: center;
 }
 
-.right {
+.TitleHeader.right {
 	text-align: right;
+}
+
+.TitleHeader.secondary {
+	color: var(--primary-color);
+	border-top: 4px solid var(--primary-color);
+	border-bottom: 5px solid var(--primary-color);
+	background-color: transparent;
 }
