@@ -4,9 +4,25 @@
 	height: 100vh;
 	padding: 4px;
 	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
 	align-items: center;
 	background-color: var(--primary-color);
 	font-weight: 700;
+}
+
+.Navbar .logo {
+	width: 80%;
+	margin-right: 8px;
+	padding-top: 32px;
+}
+
+.Navbar .logo a img {
+	width: 100%;
+}
+
+.Navbar ul {
+	margin-bottom: calc(50vh - 64px);
 }
 
 .Navbar ul li {
@@ -21,6 +37,32 @@
 
 @media only screen and (max-width: 555px) {
 	.Navbar {
+		position: fixed;
+		flex-direction: row;
+		top: 0;
+		width: 100%;
+		height: 80px;
+		padding: 8px;
+		z-index: 3;
+	}
+
+	.Navbar .logo {
+		width: 80px;
+		margin: 0;
+		padding: 0;
+	}
+
+	.Navbar ul a:nth-child(1) {
 		display: none;
+	}
+	.Navbar ul {
+		width: 100%;
+		margin: 0;
+		display: flex;
+		justify-content: flex-end;
+	}
+
+	.Navbar ul li {
+		margin: 0 8px;
 	}
 }
