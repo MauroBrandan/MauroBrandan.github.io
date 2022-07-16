@@ -55,9 +55,25 @@ ul {
 	height: 100vh;
 	padding: 4px;
 	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
 	align-items: center;
 	background-color: var(--primary-color);
 	font-weight: 700;
+}
+
+.Navbar .logo {
+	width: 80%;
+	margin-right: 8px;
+	padding-top: 32px;
+}
+
+.Navbar .logo a img {
+	width: 100%;
+}
+
+.Navbar ul {
+	margin-bottom: calc(50vh - 64px);
 }
 
 .Navbar ul li {
@@ -72,7 +88,33 @@ ul {
 
 @media only screen and (max-width: 555px) {
 	.Navbar {
+		position: fixed;
+		flex-direction: row;
+		top: 0;
+		width: 100%;
+		height: 80px;
+		padding: 8px;
+		z-index: 3;
+	}
+
+	.Navbar .logo {
+		width: 80px;
+		margin: 0;
+		padding: 0;
+	}
+
+	.Navbar ul a:nth-child(1) {
 		display: none;
+	}
+	.Navbar ul {
+		width: 100%;
+		margin: 0;
+		display: flex;
+		justify-content: flex-end;
+	}
+
+	.Navbar ul li {
+		margin: 0 8px;
 	}
 }
 
@@ -203,7 +245,6 @@ ul {
 .Hero {
 	width: 100%;
 	height: 100%;
-
 	display: flex;
 	position: relative;
 	flex-direction: column;
@@ -260,6 +301,12 @@ ul {
 	background-color: var(--accent-color);
 	border-radius: 8px;
 	transition: background 0.3s 0s ease-in;
+}
+
+@media only screen and (max-width: 555px) {
+	.Hero__description span {
+		display: none;
+	}
 }
 
 .slider {
@@ -375,10 +422,6 @@ ul {
 		grid-template-columns: 88px 1fr;
 	}
 
-	.Home .Hero {
-		height: 100vh;
-	}
-
 	.Home main {
 		grid-column: 2 / 3;
 		grid-template-rows: auto;
@@ -396,21 +439,6 @@ ul {
 @media only screen and (max-width: 555px) {
 	.Home {
 		grid-template-columns: 1fr;
-	}
-
-	.Home .Hero {
-		height: 150vh;
-		background-size: 235%;
-		background-position: top;
-	}
-
-	.Home .Hero::before {
-		background: linear-gradient(
-			180deg,
-			rgba(0, 0, 0, 0) 0%,
-			rgba(0, 0, 0, 0.5) 25%,
-			rgba(0, 0, 0, 1) 45%
-		);
 	}
 
 	.Home .SectionMain:nth-child(1) {
