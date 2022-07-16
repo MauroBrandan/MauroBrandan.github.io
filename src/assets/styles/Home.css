@@ -52,10 +52,6 @@
 		grid-template-columns: 88px 1fr;
 	}
 
-	.Home .Hero {
-		height: 100vh;
-	}
-
 	.Home main {
 		grid-column: 2 / 3;
 		grid-template-rows: auto;
@@ -73,21 +69,6 @@
 @media only screen and (max-width: 555px) {
 	.Home {
 		grid-template-columns: 1fr;
-	}
-
-	.Home .Hero {
-		height: 150vh;
-		background-size: 235%;
-		background-position: top;
-	}
-
-	.Home .Hero::before {
-		background: linear-gradient(
-			180deg,
-			rgba(0, 0, 0, 0) 0%,
-			rgba(0, 0, 0, 0.5) 25%,
-			rgba(0, 0, 0, 1) 45%
-		);
 	}
 
 	.Home .SectionMain:nth-child(1) {

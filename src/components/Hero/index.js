@@ -16,9 +16,11 @@ export default function Hero() {
 				Estudiante de Ingeniería en Sistemas y autodidacta apasionado por el
 				desarrollo de aplicaciones web y el diseño de interfaces.
 				<br />
-				Manejo las tecnologías fundamentales de la web y sus frameworks,
-				especializado en React. Además tengo conocimientos sobre diseño de base de
-				datos y tecnologías Backend, especialmente en Node.
+				<span>
+					Manejo las tecnologías fundamentales de la web y sus frameworks,
+					especializado en React. Además tengo conocimientos sobre diseño de base de
+					datos y tecnologías Backend, especialmente en Node.
+				</span>
 			</p>
 			<div className='Hero__social'>
 				<a
