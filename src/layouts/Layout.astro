@@ -1,7 +1,7 @@
 ---
 import '../styles/global.css';
-interface Props { lang?: string }
-const { lang = 'en' } = Astro.props;
+interface Props { lang?: string; title?: string; description?: string }
+const { lang = 'en', title = 'Mauro Brandan — Software Developer', description = '' } = Astro.props;
 ---
 <!doctype html>
 <html lang={lang}>
@@ -10,8 +10,8 @@ const { lang = 'en' } = Astro.props;
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Mauro Brandan</title>
-		<meta name="description" content="Mauro Brandan - Software Engineer" />
+		<title>{title}</title>
+		<meta name="description" content={description} />
 		<meta name="author" content="Mauro Brandan" />
 		<meta name="keywords" content="Mauro Brandan, Software Engineer, Web Developer" />
 	</head>
