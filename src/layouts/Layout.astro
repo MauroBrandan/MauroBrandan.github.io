@@ -1,8 +1,10 @@
 ---
- import '../styles/global.css'
+import '../styles/global.css';
+interface Props { lang?: string }
+const { lang = 'en' } = Astro.props;
 ---
 <!doctype html>
-<html lang="es">
+<html lang={lang}>
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
