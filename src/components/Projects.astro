@@ -8,7 +8,10 @@ const { t } = Astro.props;
   <div class="glow glow-blue" aria-hidden="true"></div>
   <div class="glow glow-violet" aria-hidden="true"></div>
   <div class="projects-inner">
-    <span class="section-label">{t.label}</span>
+    <div class="projects-header">
+      <span class="section-label">{t.label}</span>
+      <p class="section-subtitle">{t.subtitle}</p>
+    </div>
     <div class="cards">
       {t.items.map(project => (
         <article class="card">
@@ -16,6 +19,10 @@ const { t } = Astro.props;
             <span class="screenshot-label">Screenshot</span>
           </div>
           <div class="card-body">
+            <div class="card-meta">
+              <span class="card-meta-type">{project.meta.type}</span>
+              <span class="card-meta-period">{project.meta.period}</span>
+            </div>
             <h3 class="card-title">{project.title}</h3>
             <p class="card-desc">{project.description}</p>
             <div class="tag-row">
@@ -23,6 +30,7 @@ const { t } = Astro.props;
                 <span class="tag">{tag}</span>
               ))}
             </div>
+            <button class="card-cta">{project.cta}</button>
           </div>
         </article>
       ))}
@@ -73,12 +81,25 @@ const { t } = Astro.props;
     gap: 48px;
   }
 
+  .projects-header {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
   .section-label {
     font-family: 'Geist Mono', monospace;
     font-size: 14px;
     letter-spacing: 2px;
     color: var(--text-secondary);
     text-transform: uppercase;
+  }
+
+  .section-subtitle {
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    color: var(--text-secondary);
+    margin: 0;
   }
 
   .cards {
@@ -119,6 +140,24 @@ const { t } = Astro.props;
     flex: 1;
   }
 
+  .card-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .card-meta-type {
+    font-family: 'Geist Mono', monospace;
+    font-size: 11px;
+    color: var(--text-secondary);
+  }
+
+  .card-meta-period {
+    font-family: 'Geist Mono', monospace;
+    font-size: 11px;
+    color: var(--text-secondary);
+  }
+
   .card-title {
     font-family: 'Inter', sans-serif;
     font-size: 28px;
@@ -133,13 +172,14 @@ const { t } = Astro.props;
     line-height: 1.5;
     color: var(--text-secondary);
     margin: 0;
+    flex: 1;
   }
 
   .tag-row {
     display: flex;
     gap: 8px;
     flex-wrap: wrap;
-    margin-top: 8px;
+    margin-top: 4px;
   }
 
   .tag {
@@ -150,6 +190,27 @@ const { t } = Astro.props;
     font-family: 'Geist Mono', monospace;
     font-size: 11px;
     color: var(--text-secondary);
+  }
+
+  .card-cta {
+    display: inline-flex;
+    align-items: center;
+    padding: 10px 20px;
+    border: 1px solid var(--border-subtle);
+    background: none;
+    color: var(--text-primary);
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: border-color 0.2s;
+    width: fit-content;
+    margin-top: 4px;
+  }
+
+  .card-cta:hover {
+    border-color: var(--text-secondary);
   }
 
   @media (max-width: 768px) {
