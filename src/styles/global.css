@@ -1,1 +1,27 @@
 @import "tailwindcss";
+
+:root {
+  --bg-primary: #0a0a0a;
+  --bg-surface: #111111;
+  --bg-surface-2: #1a1a1a;
+  --bg-surface-elevated: #1a1a1a;
+  --text-primary: #e8e8e8;
+  --text-secondary: #888888;
+  --accent-blue: #4a9eff;
+  --accent-violet: #7c6fff;
+  --border-subtle: #2a2a2a;
+  --radius-card: 12px;
+  --radius-tag: 6px;
+}
+
+html, body {
+  margin: 0;
+  width: 100%;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: 'Inter', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
