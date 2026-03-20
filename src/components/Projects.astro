@@ -1,0 +1,174 @@
+---
+const projects = [
+  {
+    title: 'Syncflow',
+    description:
+      'Real-time collaboration engine for distributed teams. Handles conflict resolution, presence, and state sync across devices.',
+    tags: ['TypeScript', 'WebSocket', 'React'],
+  },
+  {
+    title: 'Cortex AI',
+    description:
+      'AI-powered code review assistant that integrates with GitHub. Analyzes PRs for security issues, performance, and best practices.',
+    tags: ['Node.js', 'OpenAI', 'GitHub API'],
+  },
+];
+---
+
+<section class="projects" id="projects">
+  <div class="glow glow-blue" aria-hidden="true"></div>
+  <div class="glow glow-violet" aria-hidden="true"></div>
+  <div class="projects-inner">
+    <span class="section-label">Projects</span>
+    <div class="cards">
+      {projects.map(project => (
+        <article class="card">
+          <div class="card-screenshot">
+            <span class="screenshot-label">Screenshot</span>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">{project.title}</h3>
+            <p class="card-desc">{project.description}</p>
+            <div class="tag-row">
+              {project.tags.map(tag => (
+                <span class="tag">{tag}</span>
+              ))}
+            </div>
+          </div>
+        </article>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .projects {
+    position: relative;
+    min-height: 652px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+  }
+
+  .glow {
+    position: absolute;
+    border-radius: 50%;
+    pointer-events: none;
+  }
+
+  .glow-blue {
+    top: -80px;
+    left: -80px;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(74,158,255,0.06) 0%, transparent 70%);
+  }
+
+  .glow-violet {
+    bottom: -80px;
+    right: -80px;
+    width: 360px;
+    height: 360px;
+    background: radial-gradient(circle, rgba(124,111,255,0.05) 0%, transparent 70%);
+  }
+
+  .projects-inner {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 100px 120px;
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+  }
+
+  .section-label {
+    font-family: 'Geist Mono', monospace;
+    font-size: 14px;
+    letter-spacing: 2px;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+  }
+
+  .cards {
+    display: flex;
+    gap: 32px;
+  }
+
+  .card {
+    flex: 1;
+    background-color: var(--bg-surface);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-card);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .card-screenshot {
+    height: 200px;
+    background-color: var(--bg-surface-2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid var(--border-subtle);
+  }
+
+  .screenshot-label {
+    font-family: 'Geist Mono', monospace;
+    font-size: 12px;
+    color: #444444;
+  }
+
+  .card-body {
+    padding: 28px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    flex: 1;
+  }
+
+  .card-title {
+    font-family: 'Inter', sans-serif;
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin: 0;
+  }
+
+  .card-desc {
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+    line-height: 1.5;
+    color: var(--text-secondary);
+    margin: 0;
+  }
+
+  .tag-row {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-top: 8px;
+  }
+
+  .tag {
+    padding: 4px 10px;
+    background-color: var(--bg-surface-elevated);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-tag);
+    font-family: 'Geist Mono', monospace;
+    font-size: 11px;
+    color: var(--text-secondary);
+  }
+
+  @media (max-width: 768px) {
+    .projects-inner {
+      padding: 60px 24px;
+    }
+    .cards {
+      flex-direction: column;
+    }
+  }
+</style>
