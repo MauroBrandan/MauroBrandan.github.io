@@ -14,6 +14,8 @@ const { t } = Astro.props;
         <h2 class="about-title">{t.title}</h2>
         <p class="about-para">{t.para1}</p>
         <p class="about-para">{t.para2}</p>
+        <p class="about-para">{t.para3}</p>
+        <a href="#" class="about-cta">{t.cta}</a>
       </div>
       <div class="photo-frame">
         <span class="photo-placeholder">Developer Photo</span>
@@ -89,10 +91,11 @@ const { t } = Astro.props;
 
   .about-title {
     font-family: 'Inter', sans-serif;
-    font-size: 32px;
+    font-size: 28px;
     font-weight: 700;
     color: var(--text-primary);
     margin: 0;
+    line-height: 1.3;
   }
 
   .about-para {
@@ -102,6 +105,26 @@ const { t } = Astro.props;
     color: var(--text-secondary);
     line-height: 1.6;
     margin: 0;
+  }
+
+  .about-cta {
+    display: inline-flex;
+    align-items: center;
+    padding: 12px 24px;
+    border: 1px solid var(--border-subtle);
+    color: var(--text-primary);
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: border-color 0.2s;
+    width: fit-content;
+    margin-top: 8px;
+  }
+
+  .about-cta:hover {
+    border-color: var(--text-secondary);
   }
 
   .photo-frame {
