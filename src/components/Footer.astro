@@ -5,21 +5,19 @@ const { t } = Astro.props;
 ---
 
 <footer class="footer">
-  <span class="footer-left">{t.left}</span>
-  <span class="footer-right">{t.right}</span>
+  <span class="footer-text">{t.text}</span>
 </footer>
 
 <style>
   .footer {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     padding: 32px 120px;
     border-top: 1px solid var(--border-subtle);
   }
 
-  .footer-left,
-  .footer-right {
+  .footer-text {
     font-family: 'Geist Mono', monospace;
     font-size: 12px;
     color: #555555;
@@ -27,8 +25,6 @@ const { t } = Astro.props;
 
   @media (max-width: 768px) {
     .footer {
-      flex-direction: column;
-      gap: 12px;
       padding: 32px 24px;
       text-align: center;
     }
