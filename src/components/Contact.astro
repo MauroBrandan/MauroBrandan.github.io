@@ -1,0 +1,135 @@
+---
+const socials = [
+  { label: 'GitHub', href: 'https://github.com' },
+  { label: 'LinkedIn', href: 'https://linkedin.com' },
+  { label: 'Twitter / X', href: 'https://x.com' },
+];
+---
+
+<section class="contact" id="contact">
+  <div class="glow glow-center" aria-hidden="true"></div>
+  <div class="glow glow-violet" aria-hidden="true"></div>
+  <div class="contact-inner">
+    <h2 class="contact-heading">Got something to build?</h2>
+    <p class="contact-sub">Let's talk.</p>
+    <a href="mailto:hello@mb.dev" class="contact-btn">hello@mb.dev</a>
+    <div class="social-links">
+      {socials.map(social => (
+        <a href={social.href} class="social-link" target="_blank" rel="noopener noreferrer">
+          {social.label}
+        </a>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .contact {
+    position: relative;
+    min-height: 458px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+
+  .glow {
+    position: absolute;
+    border-radius: 50%;
+    pointer-events: none;
+  }
+
+  .glow-center {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 600px;
+    height: 400px;
+    background: radial-gradient(ellipse, rgba(74,158,255,0.06) 0%, transparent 70%);
+  }
+
+  .glow-violet {
+    bottom: -60px;
+    right: 20%;
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, rgba(124,111,255,0.05) 0%, transparent 70%);
+  }
+
+  .contact-inner {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    padding: 0 120px;
+    text-align: center;
+  }
+
+  .contact-heading {
+    font-family: 'Inter', sans-serif;
+    font-size: 48px;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin: 0;
+    line-height: 1.1;
+  }
+
+  .contact-sub {
+    font-family: 'Inter', sans-serif;
+    font-size: 20px;
+    color: var(--text-secondary);
+    margin: 0;
+  }
+
+  .contact-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 14px 32px;
+    background-color: var(--accent-blue);
+    color: #ffffff;
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: opacity 0.2s;
+  }
+
+  .contact-btn:hover {
+    opacity: 0.85;
+  }
+
+  .social-links {
+    display: flex;
+    gap: 32px;
+  }
+
+  .social-link {
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  .social-link:hover {
+    color: var(--text-primary);
+  }
+
+  @media (max-width: 768px) {
+    .contact-inner {
+      padding: 0 24px;
+    }
+    .contact-heading {
+      font-size: 32px;
+    }
+    .social-links {
+      gap: 24px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  }
+</style>
