@@ -1,27 +1,7 @@
 ---
-const entries = [
-  {
-    company: 'Vercel',
-    dates: '2023 — Present',
-    role: 'Senior Software Engineer',
-    description:
-      'Leading frontend infrastructure for the dashboard platform. Shipped real-time collaboration features used by 100k+ developers.',
-  },
-  {
-    company: 'Linear',
-    dates: '2021 — 2023',
-    role: 'Full-Stack Engineer',
-    description:
-      'Built the real-time sync engine and offline-first architecture. Reduced P95 latency by 40% across all workspace operations.',
-  },
-  {
-    company: 'Stripe',
-    dates: '2019 — 2021',
-    role: 'Software Engineer',
-    description:
-      'Worked on the Payments API team. Designed and shipped webhook retry logic handling 2M+ events daily.',
-  },
-];
+import type { Translations } from '../i18n/translations';
+interface Props { t: Translations['experience'] }
+const { t } = Astro.props;
 ---
 
 <section class="experience" id="experience">
@@ -29,12 +9,12 @@ const entries = [
   <div class="glow glow-violet" aria-hidden="true"></div>
   <div class="experience-inner">
     <div class="experience-header">
-      <span class="section-label">EXPERIENCE</span>
-      <h2 class="experience-title">Where I've built</h2>
+      <span class="section-label">{t.label}</span>
+      <h2 class="experience-title">{t.title}</h2>
     </div>
     <div class="timeline">
-      {entries.map((entry, i) => (
-        <div class={`timeline-entry ${i < entries.length - 1 ? 'has-border' : ''}`}>
+      {t.entries.map((entry, i) => (
+        <div class={`timeline-entry ${i < t.entries.length - 1 ? 'has-border' : ''}`}>
           <div class="entry-meta">
             <span class="entry-company">{entry.company}</span>
             <span class="entry-dates">{entry.dates}</span>

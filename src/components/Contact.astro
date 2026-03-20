@@ -1,4 +1,7 @@
 ---
+import type { Translations } from '../i18n/translations';
+interface Props { t: Translations['contact'] }
+const { t } = Astro.props;
 const socials = [
   { label: 'GitHub', href: 'https://github.com' },
   { label: 'LinkedIn', href: 'https://linkedin.com' },
@@ -10,8 +13,8 @@ const socials = [
   <div class="glow glow-center" aria-hidden="true"></div>
   <div class="glow glow-violet" aria-hidden="true"></div>
   <div class="contact-inner">
-    <h2 class="contact-heading">Got something to build?</h2>
-    <p class="contact-sub">Let's talk.</p>
+    <h2 class="contact-heading">{t.heading}</h2>
+    <p class="contact-sub">{t.sub}</p>
     <a href="mailto:hello@mb.dev" class="contact-btn">hello@mb.dev</a>
     <div class="social-links">
       {socials.map(social => (

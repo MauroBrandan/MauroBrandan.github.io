@@ -1,24 +1,19 @@
 ---
+import type { Translations } from '../i18n/translations';
+interface Props { t: Translations['about'] }
+const { t } = Astro.props;
 ---
 
 <section class="about" id="about">
   <div class="glow glow-top" aria-hidden="true"></div>
   <div class="glow glow-bottom" aria-hidden="true"></div>
   <div class="about-inner">
-    <span class="section-label">About</span>
+    <span class="section-label">{t.label}</span>
     <div class="about-columns">
       <div class="about-text">
-        <h2 class="about-title">Builder mindset.</h2>
-        <p class="about-para">
-          I'm a software developer who ships real products — from concept to production,
-          solo or in small teams. I don't just write code; I build complete systems that
-          solve real problems.
-        </p>
-        <p class="about-para">
-          My approach is pragmatic: understand the problem deeply, choose the simplest
-          architecture that works, and iterate fast. I care about clean code, but I care
-          more about shipping.
-        </p>
+        <h2 class="about-title">{t.title}</h2>
+        <p class="about-para">{t.para1}</p>
+        <p class="about-para">{t.para2}</p>
       </div>
       <div class="photo-frame">
         <span class="photo-placeholder">Developer Photo</span>

@@ -1,23 +1,28 @@
 ---
-const links = ['About', 'Projects', 'Stack', 'Experience', 'Contact'];
+import type { Translations } from '../i18n/translations';
+interface Props { t: Translations['nav'] }
+const { t } = Astro.props;
 ---
 
 <nav class="nav">
   <span class="logo">MB</span>
   <ul class="nav-links">
-    {links.map(link => (
+    {t.links.map(link => (
       <li>
-        <a href={`#${link.toLowerCase()}`} class="nav-link">{link}</a>
+        <a href={`#${link.href}`} class="nav-link">{link.label}</a>
       </li>
     ))}
   </ul>
-  <button class="nav-menu" aria-label="Menu">
-    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-      <line x1="3" y1="6" x2="21" y2="6" />
-      <line x1="3" y1="12" x2="21" y2="12" />
-      <line x1="3" y1="18" x2="21" y2="18" />
-    </svg>
-  </button>
+  <div class="nav-right">
+    <a href={t.langToggleHref} class="lang-toggle">{t.langToggle}</a>
+    <button class="nav-menu" aria-label="Menu">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <line x1="3" y1="6" x2="21" y2="6" />
+        <line x1="3" y1="12" x2="21" y2="12" />
+        <line x1="3" y1="18" x2="21" y2="18" />
+      </svg>
+    </button>
+  </div>
 </nav>
 
 <style>
@@ -60,6 +65,29 @@ const links = ['About', 'Projects', 'Stack', 'Experience', 'Contact'];
 
   .nav-link:hover {
     color: var(--text-primary);
+  }
+
+  .nav-right {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .lang-toggle {
+    font-family: 'Geist Mono', monospace;
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--text-secondary);
+    text-decoration: none;
+    padding: 4px 10px;
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-tag);
+    transition: color 0.2s, border-color 0.2s;
+  }
+
+  .lang-toggle:hover {
+    color: var(--text-primary);
+    border-color: var(--text-secondary);
   }
 
   .nav-menu {

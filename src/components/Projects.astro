@@ -1,27 +1,16 @@
 ---
-const projects = [
-  {
-    title: 'Syncflow',
-    description:
-      'Real-time collaboration engine for distributed teams. Handles conflict resolution, presence, and state sync across devices.',
-    tags: ['TypeScript', 'WebSocket', 'React'],
-  },
-  {
-    title: 'Cortex AI',
-    description:
-      'AI-powered code review assistant that integrates with GitHub. Analyzes PRs for security issues, performance, and best practices.',
-    tags: ['Node.js', 'OpenAI', 'GitHub API'],
-  },
-];
+import type { Translations } from '../i18n/translations';
+interface Props { t: Translations['projects'] }
+const { t } = Astro.props;
 ---
 
 <section class="projects" id="projects">
   <div class="glow glow-blue" aria-hidden="true"></div>
   <div class="glow glow-violet" aria-hidden="true"></div>
   <div class="projects-inner">
-    <span class="section-label">Projects</span>
+    <span class="section-label">{t.label}</span>
     <div class="cards">
-      {projects.map(project => (
+      {t.items.map(project => (
         <article class="card">
           <div class="card-screenshot">
             <span class="screenshot-label">Screenshot</span>

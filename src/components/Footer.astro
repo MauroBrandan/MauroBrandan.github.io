@@ -1,9 +1,12 @@
 ---
+import type { Translations } from '../i18n/translations';
+interface Props { t: Translations['footer'] }
+const { t } = Astro.props;
 ---
 
 <footer class="footer">
-  <span class="footer-left">© 2026 MB. Built with focus.</span>
-  <span class="footer-right">Designed & developed by hand.</span>
+  <span class="footer-left">{t.left}</span>
+  <span class="footer-right">{t.right}</span>
 </footer>
 
 <style>

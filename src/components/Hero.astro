@@ -1,4 +1,7 @@
 ---
+import type { Translations } from '../i18n/translations';
+interface Props { t: Translations['hero'] }
+const { t } = Astro.props;
 const badges = ['React', 'TypeScript', 'Node.js', 'AI'];
 ---
 
@@ -6,12 +9,12 @@ const badges = ['React', 'TypeScript', 'Node.js', 'AI'];
   <div class="dot-grid" aria-hidden="true"></div>
   <div class="hero-content">
     <div class="hero-text">
-      <h1 class="headline">I build products.</h1>
-      <p class="subline">From idea to production.</p>
+      <h1 class="headline">{t.headline}</h1>
+      <p class="subline">{t.subline}</p>
       <p class="desc">TypeScript · React · Node.js · AI Integrations</p>
       <div class="cta-row">
-        <a href="#projects" class="btn-primary">View Projects</a>
-        <a href="#contact" class="btn-secondary">Get in Touch</a>
+        <a href="#projects" class="btn-primary">{t.viewProjects}</a>
+        <a href="#contact" class="btn-secondary">{t.getInTouch}</a>
       </div>
       <div class="badge-row">
         {badges.map((badge, i) => (
