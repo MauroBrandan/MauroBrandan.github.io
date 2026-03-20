@@ -1,0 +1,161 @@
+---
+const categories = [
+  { label: 'Frontend', tags: ['TypeScript', 'React', 'Next.js', 'Tailwind'] },
+  { label: 'Backend', tags: ['Node.js', 'Python', 'PostgreSQL', 'Redis'] },
+  { label: 'DevOps', tags: ['Docker', 'Kubernetes', 'AWS', 'GitHub Actions', 'Turborepo'] },
+];
+---
+
+<section class="stack" id="stack">
+  <div class="glow glow-blue" aria-hidden="true"></div>
+  <div class="glow glow-violet" aria-hidden="true"></div>
+  <div class="stack-inner">
+    <div class="stack-header">
+      <span class="section-label">STACK</span>
+      <h2 class="stack-title">Technologies I work with</h2>
+      <p class="stack-desc">Tools chosen for shipping fast, not for résumé padding.</p>
+    </div>
+    <div class="stack-grid">
+      {categories.map(cat => (
+        <div class="stack-card">
+          <span class="cat-label">{cat.label}</span>
+          <div class="tag-row">
+            {cat.tags.map(tag => (
+              <span class="tag">{tag}</span>
+            ))}
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .stack {
+    position: relative;
+    min-height: 790px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+  }
+
+  .glow {
+    position: absolute;
+    border-radius: 50%;
+    pointer-events: none;
+  }
+
+  .glow-blue {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(74,158,255,0.05) 0%, transparent 70%);
+  }
+
+  .glow-violet {
+    bottom: -100px;
+    right: -100px;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(124,111,255,0.05) 0%, transparent 70%);
+  }
+
+  .stack-inner {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 100px 120px;
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+  }
+
+  .stack-header {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .section-label {
+    font-family: 'Geist Mono', monospace;
+    font-size: 12px;
+    letter-spacing: 3px;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+  }
+
+  .stack-title {
+    font-family: 'Inter', sans-serif;
+    font-size: 36px;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin: 0;
+  }
+
+  .stack-desc {
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    color: var(--text-secondary);
+    margin: 0;
+    max-width: 500px;
+  }
+
+  .stack-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+
+  .stack-card {
+    background-color: var(--bg-surface);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-card);
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .stack-card:last-child {
+    grid-column: span 2;
+  }
+
+  .cat-label {
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--text-primary);
+  }
+
+  .tag-row {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+
+  .tag {
+    padding: 5px 10px;
+    background-color: var(--bg-surface-2);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-tag);
+    font-family: 'Geist Mono', monospace;
+    font-size: 12px;
+    color: var(--text-secondary);
+  }
+
+  @media (max-width: 768px) {
+    .stack-inner {
+      padding: 60px 24px;
+    }
+    .stack-grid {
+      grid-template-columns: 1fr;
+    }
+    .stack-card:last-child {
+      grid-column: span 1;
+    }
+  }
+</style>
