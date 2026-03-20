@@ -15,11 +15,11 @@ const { t } = Astro.props;
     </div>
     <div class="stack-grid">
       {t.categories.map(cat => (
-        <div class="stack-card">
+        <div class={`stack-card ${'accent' in cat && cat.accent ? 'stack-card-ai' : ''}`}>
           <span class="cat-label">{cat.label}</span>
           <div class="tag-row">
             {cat.tags.map(tag => (
-              <span class="tag">{tag}</span>
+              <span class={`tag ${'accent' in cat && cat.accent ? 'tag-ai' : ''}`}>{tag}</span>
             ))}
           </div>
         </div>
@@ -122,11 +122,20 @@ const { t } = Astro.props;
     grid-column: span 2;
   }
 
+  .stack-card-ai {
+    border-color: color-mix(in srgb, rgba(124,111,255,1) 30%, transparent);
+    background-color: color-mix(in srgb, rgba(124,111,255,0.05) 100%, var(--bg-surface));
+  }
+
   .cat-label {
     font-family: 'Inter', sans-serif;
     font-size: 14px;
     font-weight: 700;
     color: var(--text-primary);
+  }
+
+  .stack-card-ai .cat-label {
+    color: rgba(124, 111, 255, 0.9);
   }
 
   .tag-row {
@@ -143,6 +152,12 @@ const { t } = Astro.props;
     font-family: 'Geist Mono', monospace;
     font-size: 12px;
     color: var(--text-secondary);
+  }
+
+  .tag-ai {
+    border-color: color-mix(in srgb, rgba(124,111,255,1) 25%, transparent);
+    color: rgba(124, 111, 255, 0.8);
+    background-color: color-mix(in srgb, rgba(124,111,255,0.08) 100%, var(--bg-surface-2));
   }
 
   @media (max-width: 768px) {
