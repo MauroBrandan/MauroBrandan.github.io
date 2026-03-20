@@ -1,8 +1,24 @@
 ---
-import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
+import Nav from '../components/Nav.astro';
+import Hero from '../components/Hero.astro';
+import About from '../components/About.astro';
+import Projects from '../components/Projects.astro';
+import Stack from '../components/Stack.astro';
+import Experience from '../components/Experience.astro';
+import Contact from '../components/Contact.astro';
+import Footer from '../components/Footer.astro';
 ---
 
 <Layout>
-	<Welcome />
+  <Nav />
+  <main>
+    <Hero />
+    <About />
+    <Projects />
+    <Stack />
+    <Experience />
+    <Contact />
+  </main>
+  <Footer />
 </Layout>
