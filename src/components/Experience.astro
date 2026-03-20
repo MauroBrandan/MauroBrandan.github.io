@@ -1,0 +1,187 @@
+---
+const entries = [
+  {
+    company: 'Vercel',
+    dates: '2023 — Present',
+    role: 'Senior Software Engineer',
+    description:
+      'Leading frontend infrastructure for the dashboard platform. Shipped real-time collaboration features used by 100k+ developers.',
+  },
+  {
+    company: 'Linear',
+    dates: '2021 — 2023',
+    role: 'Full-Stack Engineer',
+    description:
+      'Built the real-time sync engine and offline-first architecture. Reduced P95 latency by 40% across all workspace operations.',
+  },
+  {
+    company: 'Stripe',
+    dates: '2019 — 2021',
+    role: 'Software Engineer',
+    description:
+      'Worked on the Payments API team. Designed and shipped webhook retry logic handling 2M+ events daily.',
+  },
+];
+---
+
+<section class="experience" id="experience">
+  <div class="glow glow-blue" aria-hidden="true"></div>
+  <div class="glow glow-violet" aria-hidden="true"></div>
+  <div class="experience-inner">
+    <div class="experience-header">
+      <span class="section-label">EXPERIENCE</span>
+      <h2 class="experience-title">Where I've built</h2>
+    </div>
+    <div class="timeline">
+      {entries.map((entry, i) => (
+        <div class={`timeline-entry ${i < entries.length - 1 ? 'has-border' : ''}`}>
+          <div class="entry-meta">
+            <span class="entry-company">{entry.company}</span>
+            <span class="entry-dates">{entry.dates}</span>
+          </div>
+          <div class="entry-details">
+            <span class="entry-role">{entry.role}</span>
+            <p class="entry-desc">{entry.description}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .experience {
+    position: relative;
+    min-height: 824px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+  }
+
+  .glow {
+    position: absolute;
+    border-radius: 50%;
+    pointer-events: none;
+  }
+
+  .glow-blue {
+    top: -80px;
+    left: -80px;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(74,158,255,0.05) 0%, transparent 70%);
+  }
+
+  .glow-violet {
+    bottom: -80px;
+    right: -80px;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(124,111,255,0.05) 0%, transparent 70%);
+  }
+
+  .experience-inner {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 100px 120px;
+    display: flex;
+    flex-direction: column;
+    gap: 56px;
+  }
+
+  .experience-header {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .section-label {
+    font-family: 'Geist Mono', monospace;
+    font-size: 12px;
+    letter-spacing: 3px;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+  }
+
+  .experience-title {
+    font-family: 'Inter', sans-serif;
+    font-size: 36px;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin: 0;
+  }
+
+  .timeline {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .timeline-entry {
+    display: flex;
+    gap: 48px;
+    padding: 32px 0;
+  }
+
+  .timeline-entry.has-border {
+    border-bottom: 1px solid var(--border-subtle);
+  }
+
+  .entry-meta {
+    width: 200px;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .entry-company {
+    font-family: 'Inter', sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--text-primary);
+  }
+
+  .entry-dates {
+    font-family: 'Geist Mono', monospace;
+    font-size: 13px;
+    color: var(--text-secondary);
+  }
+
+  .entry-details {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .entry-role {
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+    color: var(--text-primary);
+  }
+
+  .entry-desc {
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+    color: #666666;
+    line-height: 1.6;
+    margin: 0;
+    max-width: 700px;
+  }
+
+  @media (max-width: 768px) {
+    .experience-inner {
+      padding: 60px 24px;
+    }
+    .timeline-entry {
+      flex-direction: column;
+      gap: 12px;
+    }
+    .entry-meta {
+      width: 100%;
+    }
+  }
+</style>
