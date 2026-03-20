@@ -1,0 +1,27 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Nav from '../../components/Nav.astro';
+import Hero from '../../components/Hero.astro';
+import About from '../../components/About.astro';
+import Projects from '../../components/Projects.astro';
+import Stack from '../../components/Stack.astro';
+import Experience from '../../components/Experience.astro';
+import Contact from '../../components/Contact.astro';
+import Footer from '../../components/Footer.astro';
+import { translations } from '../../i18n/translations';
+
+const t = translations.es;
+---
+
+<Layout lang="es">
+  <Nav t={t.nav} />
+  <main>
+    <Hero t={t.hero} />
+    <About t={t.about} />
+    <Projects t={t.projects} />
+    <Stack t={t.stack} />
+    <Experience t={t.experience} />
+    <Contact t={t.contact} />
+  </main>
+  <Footer t={t.footer} />
+</Layout>
