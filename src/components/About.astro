@@ -18,7 +18,7 @@ const { t } = Astro.props;
         <a href="#" class="about-cta">{t.cta}</a>
       </div>
       <div class="photo-frame">
-        <span class="photo-placeholder">Developer Photo</span>
+        <img src="/assets/profile.png" alt="Developer Photo" class="photo" />
       </div>
     </div>
   </div>
@@ -139,10 +139,11 @@ const { t } = Astro.props;
     justify-content: center;
   }
 
-  .photo-placeholder {
-    font-family: 'Geist Mono', monospace;
-    font-size: 13px;
-    color: #444444;
+  .photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: var(--radius-card);
   }
 
   @media (max-width: 768px) {
@@ -155,6 +156,10 @@ const { t } = Astro.props;
     .photo-frame {
       width: 100%;
       height: 280px;
+    }
+
+    .photo {
+      object-position: 0% 0%;
     }
   }
 </style>
