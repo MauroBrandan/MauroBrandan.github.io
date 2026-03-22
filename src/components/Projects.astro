@@ -16,7 +16,7 @@ const { t } = Astro.props;
       {t.items.map(project => (
         <article class="card">
           <div class="card-screenshot">
-            <span class="screenshot-label">Screenshot</span>
+            <img src={project.coverImage} alt={`${project.title} Screenshot`} class="screenshot" />
           </div>
           <div class="card-body">
             <div class="card-meta">
@@ -126,10 +126,10 @@ const { t } = Astro.props;
     border-bottom: 1px solid var(--border-subtle);
   }
 
-  .screenshot-label {
-    font-family: 'Geist Mono', monospace;
-    font-size: 12px;
-    color: #444444;
+  .screenshot {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
 
   .card-body {

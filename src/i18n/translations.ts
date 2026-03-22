@@ -46,6 +46,7 @@ export const translations = {
             'From developer to tech lead. From marketplace to SaaS. A product built end-to-end with a team of 5 people.',
           longDesc:
             "I joined as a developer and ended up leading the technical team. Together we took the product from a basic marketplace to a full SaaS — redefining the business model along the way.\n\nI built the product core: contracts, Stripe subscriptions, role-based access control (RBAC), authentication, and user dashboard. I designed the scalable frontend architecture and published the component library on NPM. And yes — I also integrated the first LLM-based assistants for internal support.\n\nThe biggest takeaway: code is only part of it. Product ownership, business decisions, and team communication carry equal weight.",
+          coverImage: '/assets/tackr.png',
           tags: ['Next.js', 'GraphQL', 'Firebase', 'Stripe', 'TypeScript', 'LLMs', 'NPM Package'],
           cta: 'Read more',
           meta: { type: 'SaaS · Freelancer Management', period: '2023 – 2025', role: 'Software Developer → Tech Lead' },
@@ -56,6 +57,7 @@ export const translations = {
             'Where AI stopped being a buzzword. Order processing pipelines using LLMs and RAG architectures — in real production.',
           longDesc:
             "I designed and implemented order processing pipelines that transform free-form text into structured data — using LLMs and RAG architectures.\n\nThe challenge was real: orders arrived in inconsistent formats, with human errors and no structure. The solution couldn't just be a form — it had to understand natural language and convert it into something the system could process with confidence.\n\nThe result: fewer human errors, faster processing, and more predictable B2B operations for clients.\n\nFirst time I built AI that solves a concrete business problem — not a lab demo.",
+          coverImage: '/assets/ordertob.png',
           tags: ['Node.js', 'Express', 'LLMs', 'RAG', 'Prisma', 'PostgreSQL', 'React', 'TypeScript'],
           cta: 'Read more',
           meta: { type: 'SaaS B2B · AI Operations', period: 'Nov 2025 – Present', role: 'Software Developer' },
@@ -164,6 +166,7 @@ export const translations = {
             'De developer a tech lead. De marketplace a SaaS. Un producto construido de punta a punta con un equipo de 5 personas.',
           longDesc:
             'Entré como developer y terminé liderando el equipo técnico. Juntos llevamos el producto de un marketplace básico a un SaaS completo, redefiniendo el modelo de negocio en el camino.\n\nConstruí el core del producto: contratos, suscripciones con Stripe, sistema de roles (RBAC), autenticación y dashboard de usuarios. Diseñé la arquitectura frontend escalable y publiqué la librería de componentes en NPM. Y sí, también integré los primeros asistentes basados en LLMs para soporte interno.\n\nLo que más me llevé: entender que el código es solo una parte. El ownership del producto, las decisiones de negocio y la comunicación con el equipo pesan igual.',
+          coverImage: '/assets/tackr.png',
           tags: ['Next.js', 'GraphQL', 'Firebase', 'Stripe', 'TypeScript', 'LLMs', 'NPM Package'],
           cta: 'Ver más',
           meta: { type: 'SaaS · Gestión para freelancers', period: '2023 – 2025', role: 'Software Developer → Tech Lead' },
@@ -174,6 +177,7 @@ export const translations = {
             'Donde la IA dejó de ser buzzword. Pipelines de procesamiento de pedidos con LLMs y arquitecturas RAG en producción real.',
           longDesc:
             'Diseñé e implementé pipelines de procesamiento de pedidos que transforman texto libre en datos estructurados, usando LLMs y arquitecturas RAG.\n\nEl desafío era real: los pedidos llegaban en formatos inconsistentes, con errores humanos y sin estructura. La solución no podía ser solo un formulario, tenía que entender el lenguaje natural y convertirlo en algo que el sistema pudiera procesar con confianza.\n\nEl resultado: menos errores humanos, procesamiento más rápido y operaciones B2B más predecibles para los clientes.\n\nPrimera vez que construí IA que resuelve un problema de negocio concreto, no un demo de laboratorio.',
+          coverImage: '/assets/ordertob.png',
           tags: ['Node.js', 'Express', 'LLMs', 'RAG', 'Prisma', 'PostgreSQL', 'React', 'TypeScript'],
           cta: 'Ver más',
           meta: { type: 'SaaS B2B · IA aplicada a operaciones', period: 'Nov 2025 – 2026', role: 'Software Developer' },
