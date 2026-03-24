@@ -14,25 +14,28 @@ const { t } = Astro.props;
     </div>
     <div class="cards">
       {t.items.map(project => (
-        <article class="card">
-          <div class="card-screenshot">
-            <img src={project.coverImage} alt={`${project.title} Screenshot`} class="screenshot" />
-          </div>
-          <div class="card-body">
-            <div class="card-meta">
-              <span class="card-meta-type">{project.meta.type}</span>
-              <span class="card-meta-period">{project.meta.period}</span>
+        <div class="card-tilt">
+          <article class="card">
+            <div class="card-glare"></div>
+            <div class="card-screenshot">
+              <img src={project.coverImage} alt={`${project.title} Screenshot`} class="screenshot" />
             </div>
-            <h3 class="card-title">{project.title}</h3>
-            <p class="card-desc">{project.description}</p>
-            <div class="tag-row">
-              {project.tags.map(tag => (
-                <span class="tag">{tag}</span>
-              ))}
+            <div class="card-body">
+              <div class="card-meta">
+                <span class="card-meta-type">{project.meta.type}</span>
+                <span class="card-meta-period">{project.meta.period}</span>
+              </div>
+              <h3 class="card-title">{project.title}</h3>
+              <p class="card-desc">{project.description}</p>
+              <div class="tag-row">
+                {project.tags.map(tag => (
+                  <span class="tag">{tag}</span>
+                ))}
+              </div>
+              <button class="card-cta">{project.cta}</button>
             </div>
-            <button class="card-cta">{project.cta}</button>
-          </div>
-        </article>
+          </article>
+        </div>
       ))}
     </div>
   </div>
@@ -107,14 +110,45 @@ const { t } = Astro.props;
     gap: 32px;
   }
 
-  .card {
+  .card-tilt {
     flex: 1;
+    perspective: 800px;
+  }
+
+  .card {
+    position: relative;
     background-color: var(--bg-surface);
     border: 1px solid var(--border-subtle);
     border-radius: var(--radius-card);
     overflow: hidden;
     display: flex;
     flex-direction: column;
+    transform-style: preserve-3d;
+    transition: transform 0.15s ease-out, box-shadow 0.15s ease-out;
+    will-change: transform;
+  }
+
+  .card-tilt:hover .card {
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3), 0 0 30px rgba(74, 158, 255, 0.05);
+  }
+
+  .card-glare {
+    position: absolute;
+    inset: 0;
+    z-index: 10;
+    border-radius: var(--radius-card);
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.15s ease-out;
+    background: radial-gradient(
+      ellipse at 50% 50%,
+      rgba(255, 255, 255, 0.12) 0%,
+      transparent 70%
+    );
+  }
+
+  .card-tilt:hover .card-glare {
+    opacity: 1;
   }
 
   .card-screenshot {
@@ -222,3 +256,43 @@ const { t } = Astro.props;
     }
   }
 </style>
+
+<script>
+  function initTiltCards() {
+    const tiltContainers = document.querySelectorAll<HTMLElement>('.card-tilt');
+    const maxRotation = 12;
+
+    tiltContainers.forEach(container => {
+      const card = container.querySelector<HTMLElement>('.card');
+      const glare = container.querySelector<HTMLElement>('.card-glare');
+      if (!card || !glare) return;
+
+      container.addEventListener('mousemove', (e) => {
+        const rect = container.getBoundingClientRect();
+        const x = (e.clientX - rect.left) / rect.width;
+        const y = (e.clientY - rect.top) / rect.height;
+
+        const rotateY = (x - 0.5) * maxRotation;
+        const rotateX = (0.5 - y) * maxRotation;
+
+        card.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+
+        const glareX = x * 100;
+        const glareY = y * 100;
+        glare.style.background = `radial-gradient(ellipse at ${glareX}% ${glareY}%, rgba(255,255,255,0.12) 0%, transparent 70%)`;
+      });
+
+      container.addEventListener('mouseleave', () => {
+        card.style.transform = 'rotateX(0deg) rotateY(0deg)';
+        glare.style.opacity = '0';
+      });
+
+      container.addEventListener('mouseenter', () => {
+        glare.style.opacity = '1';
+      });
+    });
+  }
+
+  initTiltCards();
+  document.addEventListener('astro:after-swap', initTiltCards);
+</script>

@@ -58,7 +58,7 @@ export const translations = {
           longDesc:
             "I designed and implemented order processing pipelines that transform free-form text into structured data — using LLMs and RAG architectures.\n\nThe challenge was real: orders arrived in inconsistent formats, with human errors and no structure. The solution couldn't just be a form — it had to understand natural language and convert it into something the system could process with confidence.\n\nThe result: fewer human errors, faster processing, and more predictable B2B operations for clients.\n\nFirst time I built AI that solves a concrete business problem — not a lab demo.",
           coverImage: '/assets/ordertob.png',
-          tags: ['Node.js', 'Express', 'LLMs', 'RAG', 'Prisma', 'PostgreSQL', 'React', 'TypeScript'],
+          tags: ['Node.js', 'Express', 'LLMs', 'RAG', 'PostgreSQL', 'React', 'TypeScript'],
           cta: 'Read more',
           meta: { type: 'SaaS B2B · AI Operations', period: 'Nov 2025 – Present', role: 'Software Developer' },
         },
@@ -178,7 +178,7 @@ export const translations = {
           longDesc:
             'Diseñé e implementé pipelines de procesamiento de pedidos que transforman texto libre en datos estructurados, usando LLMs y arquitecturas RAG.\n\nEl desafío era real: los pedidos llegaban en formatos inconsistentes, con errores humanos y sin estructura. La solución no podía ser solo un formulario, tenía que entender el lenguaje natural y convertirlo en algo que el sistema pudiera procesar con confianza.\n\nEl resultado: menos errores humanos, procesamiento más rápido y operaciones B2B más predecibles para los clientes.\n\nPrimera vez que construí IA que resuelve un problema de negocio concreto, no un demo de laboratorio.',
           coverImage: '/assets/ordertob.png',
-          tags: ['Node.js', 'Express', 'LLMs', 'RAG', 'Prisma', 'PostgreSQL', 'React', 'TypeScript'],
+          tags: ['Node.js', 'Express', 'LLMs', 'RAG', 'PostgreSQL', 'React', 'TypeScript'],
           cta: 'Ver más',
           meta: { type: 'SaaS B2B · IA aplicada a operaciones', period: 'Nov 2025 – 2026', role: 'Software Developer' },
         },
