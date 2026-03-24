@@ -5,7 +5,7 @@ const { t } = Astro.props;
 ---
 
 <nav class="nav">
-  <span class="logo">MB</span>
+  <img src="/logo.svg" alt="Logo" class="logo">
   <ul class="nav-links">
     {t.links.map(link => (
       <li>
@@ -40,10 +40,8 @@ const { t } = Astro.props;
   }
 
   .logo {
-    font-family: 'Inter', sans-serif;
-    font-size: 20px;
-    font-weight: 700;
-    color: var(--text-primary);
+    width: 32px;
+    height: 32px;
   }
 
   .nav-links {
