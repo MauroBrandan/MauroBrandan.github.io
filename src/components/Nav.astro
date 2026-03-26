@@ -103,9 +103,44 @@ const { t } = Astro.props;
     }
     .nav-links {
       display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      flex-direction: column;
+      gap: 0;
+      padding: 8px 24px;
+      background-color: rgba(10, 10, 10, 0.95);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border-subtle);
+    }
+    .nav-links.open {
+      display: flex;
+    }
+    .nav-links li {
+      border-top: 1px solid var(--border-subtle);
+    }
+    .nav-link {
+      display: block;
+      padding: 12px 0;
     }
     .nav-menu {
       display: block;
     }
   }
 </style>
+
+<script is:inline>
+  document.addEventListener('DOMContentLoaded', () => {
+    const btn = document.querySelector('.nav-menu');
+    const links = document.querySelector('.nav-links');
+
+    btn?.addEventListener('click', () => {
+      links?.classList.toggle('open');
+    });
+
+    links?.querySelectorAll('.nav-link').forEach(link => {
+      link.addEventListener('click', () => links.classList.remove('open'));
+    });
+  });
+</script>
