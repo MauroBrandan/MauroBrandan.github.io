@@ -5,7 +5,7 @@ const { t } = Astro.props;
 const socials = [
   { label: 'LinkedIn', href: 'https://linkedin.com/in/maurobrandan' },
   { label: 'GitHub', href: 'https://github.com/MauroBrandan' },
-  { label: 'Email', href: 'mailto:maurobrandan.mb@gmail.com' },
+  { label: 'WhatsApp', href: "https://wa.me/543865646245" },
 ];
 ---
 
@@ -16,7 +16,9 @@ const socials = [
     <h2 class="contact-heading">{t.heading}</h2>
     <p class="contact-sub">{t.sub}</p>
     <p class="contact-support">{t.supportingCopy}</p>
-    <a href="mailto:maurobrandan.mb@gmail.com" class="contact-btn">{t.cta}</a>
+    <button onclick=`window.open('https://mail.google.com/mail/?view=cm&to=maurobrandan.mb@gmail.com&su=Hola%20Mauro', 'gmail', 'width=600,height=600')` class="contact-btn">
+      {t.cta}
+    </button>
     <div class="social-links">
       {socials.map(social => (
         <a href={social.href} class="social-link" target="_blank" rel="noopener noreferrer">
@@ -93,8 +95,9 @@ const socials = [
     font-size: 15px;
     color: var(--text-secondary);
     margin: 0;
-    max-width: 500px;
+    max-width: 600px;
     line-height: 1.6;
+    text-wrap: balance;
   }
 
   .contact-btn {
@@ -111,6 +114,7 @@ const socials = [
     text-decoration: none;
     transition: opacity 0.2s;
     margin-top: 4px;
+    cursor: pointer;
   }
 
   .contact-btn:hover {

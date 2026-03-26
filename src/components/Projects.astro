@@ -32,7 +32,7 @@ const { t } = Astro.props;
                   <span class="tag">{tag}</span>
                 ))}
               </div>
-              <button class="card-cta">{project.cta}</button>
+              <a href={project.href} class="card-cta" target="_blank" rel="noopener noreferrer">{project.cta}</a>
             </div>
           </article>
         </div>
